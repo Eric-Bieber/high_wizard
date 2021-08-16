@@ -1,0 +1,22 @@
+https://www.youtube.com/watch?v=U0SZWc6qb8o
+
+auto attack (heavens drive 0:28):
+- small aoe earth spike (was used to break frozen people), 1.5x dmg to frozen people?
+
+ability 1 (Fire wall 0:16):
+- wall of fire as a barrier
+
+ability 2 (jupitel thunder 3:00):
+- electric push spell does double damage to frozen things
+
+ability 3 (storm gust 0:03):
+- aoe ice spell that freezes on third hit
+
+passive 1 (soul strike, 2:48): 
+- fires off "whispy lasers" every x scaling amount of time based off level
+
+passive 2 (amp magic): 
+- quagmire (aoe slow spell)
+
+passive 3:
+- standing still for 1 second causes the spell to cast, 1.5x next spells damage

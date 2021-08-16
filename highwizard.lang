@@ -1,0 +1,65 @@
+<lang>
+	<string name="class.highwizard">Blade Dancer</string>
+	<string name="class.highwizard.desc">An adept of the Martian priesthood, sworn to seek out lost knowledge.</string>
+	
+	<string name="skills.highwizard.omnissian-axe">Omnissian Axe</string>
+	<string name="skills.highwizard.omnissian-axe.create">A heavy slashing greataxe that slices projectiles.</string>
+	<string name="skills.highwizard.omnissian-axe.1">Cleaves all enemies for 7 damage.</string>
+	<string name="skills.highwizard.omnissian-axe.2">Cleaves all enemies for 10 physical damage and swings 10% faster.</string>
+	<string name="skills.highwizard.omnissian-axe.3">Cleaves all enemies for 15 physical damage and swings 20% faster.</string>
+	<string name="skills.highwizard.omnissian-axe.4">Cleaves all enemies for 20 physical damage and swings 30% faster.</string>
+	<string name="skills.highwizard.omnissian-axe.5">Cleaves all enemies for 25 physical damage and swings 40% faster.</string>
+	<string name="skills.highwizard.omnissian-axe.6">Cleaves all enemies for 30 physical damage and swings 50% faster.</string>
+	
+	<string name="skills.highwizard.solar-atomiser">Solar Atomiser</string>
+	<string name="skills.highwizard.solar-atomiser.create">The Tech-Priest charges a laser cannon with devastating power.</string>
+	<string name="skills.highwizard.solar-atomiser.1">The Tech-Priest charges the cannon up to a total of 2 seconds dealing a minimum of 10 and a maximum of 30 magic damage within 125 range</string>
+	<string name="skills.highwizard.solar-atomiser.2">The Tech-Priest charges the cannon up to a total of 2 seconds dealing a minimum of 20 and a maximum of 50 magic damage within 175 range.</string>
+	<string name="skills.highwizard.solar-atomiser.3">The Tech-Priest charges the cannon up to a total of 2 seconds dealing a minimum of 30 and a maximum of 70 magic damage within 225 range.</string>
+	<string name="skills.highwizard.solar-atomiser.4">The Tech-Priest charges the cannon up to a total of 2 seconds dealing a minimum of 40 and a maximum of 90 magic damage within 275 range.</string>
+	<string name="skills.highwizard.solar-atomiser.5">The Tech-Priest charges the cannon up to a total of 2 seconds dealing a minimum of 50 and a maximum of 110 magic damage within 325 range.</string>
+	<string name="skills.highwizard.solar-atomiser.6">The Tech-Priest charges the cannon up to a total of 2 seconds dealing a minimum of 60 and a maximum of 150 magic damage within 500 range.</string>
+	
+	<string name="skills.highwizard.graviton-field">Graviton Field</string>
+	<string name="skills.highwizard.graviton-field.create">The Tech-Priest deploys a gravity manipulating device that slows and debuffs enemies.</string>
+	<string name="skills.highwizard.graviton-field.1">The device's field slows and reduces enemies resistance by 20% and inflicts 5 magic damage per second to all enemies within the field.</string>
+	<string name="skills.highwizard.graviton-field.2">The device's field slows and reduces enemies resistance by 30% and inflicts 7 magic damage per second to all enemies within the field.</string>
+	<string name="skills.highwizard.graviton-field.3">The device's field slows and reduces enemies resistance by 40% and inflicts 9 magic damage per second to all enemies within the field.</string>
+	<string name="skills.highwizard.graviton-field.4">The device's field slows and reduces enemies resistance by 50% and inflicts 11 magic damage per second to all enemies within the field.</string>
+	
+	<string name="skills.highwizard.wrath-of-mars">Wrath of Mars</string>
+	<string name="skills.highwizard.wrath-of-mars.create">The highwizard releases powerful beams from the Mechanical Arms destroying all surrounding matter.</string>
+	<string name="skills.highwizard.wrath-of-mars.1">THIS REQUIRES AT LEAST ONE MECHANICAL ARM!! 
+The beams spin once around the Tech-Priest damaging each enemy for 5 magic damage, sometimes multiple times depending on their size.</string>
+	<string name="skills.highwizard.wrath-of-mars.2">THIS REQUIRES AT LEAST ONE MECHANICAL ARM!!
+The beams spin twice around the Tech-Priest damaging each enemy for 10 magic damage, sometimes multiple times depending on their size.</string>
+	<string name="skills.highwizard.wrath-of-mars.3">THIS REQUIRES AT LEAST ONE MECHANICAL ARM!!
+The beams spin thrice around the Tech-Priest damaging each enemy for 15 magic damage, sometimes multiple times depending on their size.</string>
+	
+	<string name="skills.highwizard.incense-candles">Incense Candles</string>
+	<string name="skills.highwizard.incense-candles.create">Drops a candle on enemy death that dispenses a rich incense that buffs allies.</string>
+	<string name="skills.highwizard.incense-candles.1">A candle has a 10% chance to drop on enemy death and dispenses an incense giving a 10% attack speed and healing received buff to all allies for 3 seconds.</string>
+	<string name="skills.highwizard.incense-candles.2">A candle has a 15% chance to drop on enemy death and dispenses an incense giving a 15% attack speed and healing received buff to all allies for 3.5 seconds.</string>
+	<string name="skills.highwizard.incense-candles.3">A candle has a 20% chance to drop on enemy death and dispenses an incense giving a 20% attack speed and healing received buff to all allies for 4 seconds.</string>
+	<string name="skills.highwizard.incense-candles.4">A candle has a 25% chance to drop on enemy death and dispenses an incense giving a 25% attack speed and healing received buff to all allies for 4.5 seconds.</string>
+	<string name="skills.highwizard.incense-candles.5">A candle has a 30% chance to drop on enemy death and dispenses an incense giving a 30% attack speed and healing received buff to all allies for 5 seconds.</string>
+	
+	<string name="skills.highwizard.mechanical-arms">Mechanical Arms</string>
+	<string name="skills.highwizard.mechanical-arms.create">The Tech-Priest mounts Mechanical arms on his back which scan the surrounding area and blast all enemies within their range.</string>
+	<string name="skills.highwizard.mechanical-arms.1">An arm blasts an enemy within 70 range, firing every .35 seconds and dealing 5 magic damage per shot.</string>
+	<string name="skills.highwizard.mechanical-arms.2">Two arms blast enemies within 70 range, firing every .35 seconds and dealing 5 magic damage per shot.</string>
+	<string name="skills.highwizard.mechanical-arms.3">Two arms blast enemies within 80 range, firing every .35 seconds and dealing 10 magic damage per shot.</string>
+	<string name="skills.highwizard.mechanical-arms.4">Two arms blast enemies within 90 range, firing every .28 seconds and dealing 15 magic damage per shot.</string>
+	
+	<string name="skills.highwizard.laser-upgrades">Laser upgrades</string>
+	<string name="skills.highwizard.laser-upgrades.create">The Tech-Priest upgrades all his laser and beam weapons to further destroy his enemy.</string>
+	<string name="skills.highwizard.laser-upgrades.1">All laser and beam weapons change their visuals and now singe enemies they hit for 6 magic damage every .5 seconds for 1.5 seconds.</string>
+	<string name="skills.highwizard.laser-upgrades.2">All laser and beam weapons change their visuals again and now singe enemies they hit for 12 magic damage every .5 seconds for 1.5 seconds and stun enemies for .5 seconds.</string>
+	
+	<string name="titles.highwizard-3">Initiate</string>
+	<string name="titles.highwizard-4">Neophyte</string>
+	<string name="titles.highwizard-5">Enginseer</string>
+	<string name="titles.highwizard-6">Magos</string>
+	<string name="titles.highwizard-7">Arch-Magos</string>
+	<string name="titles.highwizard-8">Magos Dominus</string>
+</lang>

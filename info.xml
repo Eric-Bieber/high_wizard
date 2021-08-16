@@ -1,0 +1,13 @@
+<dict>
+	<string name="name">High Wizard Class</string>
+	<string name="author">Retronyx</string>
+	<string name="description">Play as a High Wizard</string>
+	
+	<array name="custom-character-classes">
+		<dict>
+			<string name="id">highwizard</string>
+			<string name="name">High Wizard</string>
+			<string name="description">An adept of the Martian priesthood, sworn to seek out lost knowledge.</string>
+		</dict>
+	</array>
+</dict>
