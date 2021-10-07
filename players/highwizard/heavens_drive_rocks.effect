@@ -1,0 +1,12 @@
+<effect looping="false" layer="-1">
+	<sprite looping="false" origin="16 18" texture="./heavens_drive_rocks.png" material="effects/effects.mats:default"
+		color-r="1"
+		color-g="1"
+		color-b="1"
+		color-a="0.9"
+	>
+		<frame time="150">0 0 32 64</frame>
+		<frame time="150">32 0 32 64</frame>
+		<frame time="3000">0 64 32 64</frame>
+	</sprite>
+</effect>

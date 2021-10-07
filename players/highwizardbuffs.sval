@@ -1,0 +1,25 @@
+<svals>
+	<dict name="heavens-drive-1">
+		<int name="duration">500</int>
+
+        <dict name="tick">
+            <int name="freq">100</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">5</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="firewall-1">
+        <int name="duration">1000</int>
+
+        <dict name="tick">
+            <int name="freq">300</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">5</int>
+            </dict>
+        </dict>
+    </dict>
+</svals>

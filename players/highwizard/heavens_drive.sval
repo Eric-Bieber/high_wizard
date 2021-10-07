@@ -12,13 +12,22 @@
 		<dict>
 			<string name="class">Skills::HeavensDrive</string>
 			
-			<int name="cooldown">350</int>
+			<int name="cooldown">700</int>
 			<int name="castpoint">0</int>
 			
 			<string name="cursor-fx">players/highwizard/heavens_drive_cursor.effect</string>
 			<string name="snd">event:/player/sorcerer/shard_shoot</string>
 			<string name="anim">attack 8</string>
 			<float name="speed-mul">0.5</float>
+
+			<float name="max-range">100</float>
+
+            <int name="mana-cost">0</int>
+
+            <string name="unit">players/highwizard/heavens_drive_area_1.unit</string>
+            <int name="max-count">3</int>
+            <bool name="safe-spawn">true</bool>
+            <int name="spawn-dist">10</int>
 		</dict>
 		
 		<!-- Level 2 -->

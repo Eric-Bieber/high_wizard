@@ -1,11 +1,11 @@
 <dict>
 	<array name="skills">
 		<string>players/highwizard/heavens_drive.sval</string>
-		<string>players/highwizard/comet.sval</string>
-		<string>players/highwizard/frost_nova.sval</string>
+		<string>players/highwizard/firewall.sval</string>
+		<string>players/highwizard/jupitel_thunder.sval</string>
 		<string>players/highwizard/orb_of_winter.sval</string>
 		
-		<string>players/highwizard/biting_chill.sval</string>
+		<string>players/highwizard/soulstrike.sval</string>
 		<string>players/highwizard/ice_barrier.sval</string>
 		<string>players/highwizard/shatter.sval</string>
 	</array>

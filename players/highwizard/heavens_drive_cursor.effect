@@ -1,10 +1,10 @@
 <effect looping="true">
-	<sprite looping="false" layer="2" origin="32 32" texture="./heavens_drive_cursor.png" material="system/default.mats:bright-noxray-glowing"
+	<sprite looping="false" layer="2" origin="16 16" texture="./heavens_drive_cursor_2.png" material="system/default.mats:bright-noxray-glowing"
 		color-r="1"
 		color-g="1"
 		color-b="1"
 		color-a="1"
 	>
-		<frame time="60">0 0 64 64</frame>
+		<frame time="60">0 0 32 32</frame>
 	</sprite>
 </effect>
