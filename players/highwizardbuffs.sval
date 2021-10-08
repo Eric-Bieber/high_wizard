@@ -22,4 +22,18 @@
             </dict>
         </dict>
     </dict>
+
+    <dict name="jupitel_thunder-1">
+        <int name="duration">500</int>
+        <float name="speed-mul">0</float>
+        <bool name="disarm">true</bool>
+
+        <dict name="tick">
+            <int name="freq">100</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">5</int>
+            </dict>
+        </dict>
+    </dict>
 </svals>

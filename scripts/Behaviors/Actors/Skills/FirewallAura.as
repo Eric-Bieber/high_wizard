@@ -95,7 +95,7 @@ class FirewallAura : ICompositeActorSkill
 				auto actor = cast<Actor>(m_targets[i].GetScriptBehavior());
 
 				auto behavior = cast<CompositeActorBehavior>(actor);
-				if (behavior.m_target !is null){
+				if (behavior.m_target !is null && behavior.m_enemyType != "construct"){
 					vec3 dir = behavior.m_target.m_unit.GetPosition() - m_targets[i].GetPosition();
 					float m_dir = atan(dir.y, dir.x);
 					vec3 displacement = findDisplacement(m_dir);

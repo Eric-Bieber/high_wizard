@@ -1,0 +1,12 @@
+<effect looping="true" layer="1">
+	<sprite looping="true" origin="7 7" texture="./jupitel_thunder_lightning.png" material="system/default.mats:glow-both-bright-player"
+		color-r="1"
+		color-g="1"
+		color-b="1"
+		color-a="1"
+	>
+		<frame time="100">0 0 16 16</frame>
+		<frame time="100">16 0 16 16</frame>
+		<frame time="100">0 16 16 16</frame>
+	</sprite>
+</effect>

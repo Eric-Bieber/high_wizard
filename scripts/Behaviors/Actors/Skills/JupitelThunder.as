@@ -31,6 +31,10 @@ namespace Skills
 		int m_fxCountC;
 
 		int distance = 5;
+
+		array<UnitPtr> m_hits;
+
+		ActorBuffDef@ m_buff;
 		
 		JupitelThunder(UnitPtr unit, SValue& params)
 		{
@@ -56,6 +60,8 @@ namespace Skills
 
 			m_fxStart = GetParamBool(unit, params, "play-fx-start", false, true);
 			m_fxCount = GetParamInt(unit, params, "play-fx-count", false, -1);
+
+			@m_buff = LoadActorBuff(GetParamString(unit, params, "buff", true));
 		}
 		
 		void Initialize(Actor@ owner, ScriptSprite@ icon, uint id) override
@@ -226,19 +232,26 @@ namespace Skills
 					ApplyEffects(m_effects, m_owner, unit, upos, dir, 1.0, m_husk, 0, 0); // self/team/enemy dmg
 					
 					auto actor = cast<Actor>(unit.GetScriptBehavior());
-
 					auto behavior = cast<CompositeActorBehavior>(actor);
-					if (behavior.m_target !is null){
+
+					actor.ApplyBuff(ActorBuff(behavior, m_buff, 1.0f, false));
+
+					if (behavior.m_target !is null && behavior.m_enemyType != "construct" && !behavior.m_hasBossBar &&
+						Reflect::GetTypeName(behavior.m_movement) != "PassiveMovement") { 
+
 						vec3 temp_dir = behavior.m_target.m_unit.GetPosition() - unit.GetPosition();
 						float m_dir = atan(temp_dir.y, temp_dir.x);
 						vec3 displacement = findDisplacement(m_dir);
 						
-						for (uint j = 0; j < 10; j++) 
+						for (uint j = 0; j < 10; j++)  {
+							if (behavior.m_movement.OnCollide())
 							unit.SetPosition(unit.GetPosition() + displacement);
+						}
 					}
 
 					dictionary ePs = { { 'angle', m_angle } };
-					PlayEffect(m_hitFx, rayResults[i].point, ePs);
+					UnitPtr m_hit = PlayEffect(m_hitFx, rayResults[i].point, null);
+					m_hits.insertLast(m_hit);
 
 					if (dmgTaker !is null)
 						hitSomething = true;
@@ -246,10 +259,15 @@ namespace Skills
 
 				if (hitSomething)
 					PlaySound3D(m_hitSnd, m_owner.m_unit.GetPosition());
+
+				for (uint i = 0; i < m_hits.length(); i++) {
+					m_hits[i].SetPosition(m_arrHit[i].GetPosition());
+				}
 						
 				if (--m_raysC <= 0)
 				{
 					m_arrHit.removeRange(0, m_arrHit.length());
+					m_hits.removeRange(0, m_hits.length());
 					
 					if (--m_swingsC > 0)
 					{

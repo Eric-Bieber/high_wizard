@@ -2,12 +2,12 @@
     <behavior class="PlayerOwnedSummon">
         <string name="team">player</string>
 
-        <int name="hp">100000</int>
+        <int name="hp">100</int>
         <string name="type">construct</string>
         <int name="ttl">5000</int>
-        <bool name="targetable">false</bool>
+        <bool name="targetable">true</bool>
         <bool name="no-buffs">true</bool>
-        <bool name="floating-hurt">false</bool>
+        <bool name="floating-hurt">true</bool>
 
         <dict name="movement">
             <string name="class">PassiveMovement</string>
@@ -20,7 +20,7 @@
                 <string name="buff">players/highwizardbuffs.sval:firewall-1</string>
                 <bool name="friendly">false</bool>
                 <int name="freq">.25</int>
-                <int name="range">12</int>
+                <int name="range">10</int>
             </dict>
         </array>
 
@@ -31,7 +31,7 @@
     <scenes start="loop">
         <scene name="shared">
             <collision static="true">
-                <circle offset="0 0" shoot-through="true" layer="-1" aim-through="true" radius="1" sensor="true" />
+                <circle offset="0 0" shoot-through="false" layer="-1" aim-through="true" radius="4" sensor="true" />
             </collision>
         </scene>
 
