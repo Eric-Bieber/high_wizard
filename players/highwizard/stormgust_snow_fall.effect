@@ -1,0 +1,18 @@
+<effect>
+	<param name="fall_angle" default="0.3" />
+	<sprite looping="true" layer="2" origin="15 24" texture="./stormgust_snow.png" material="system/default.mats:bright-noxray-glowing"
+		color-r="1"
+		color-g="1"
+		color-b="1"
+		color-a="saturate(1-t)"
+
+		pos-x="cos(fall_angle-pi/2)*50 * saturate(1-(t+l))"
+		pos-y="sin(fall_angle-pi/2)*50 * saturate(1-(t+l))"
+
+		scale-x="saturate(0.8)"
+		scale-y="saturate(0.8)"
+		angle="pi*t*4"
+	>
+		<frame time="1000">0 0 64 64</frame>
+	</sprite>
+</effect>

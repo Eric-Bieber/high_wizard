@@ -1,0 +1,19 @@
+<effect looping="false">
+	<param name="angle" default="0" />
+	<param name="height" default="0" />
+	
+	<sprite looping="false" origin="9 3" texture="./soulstrike.png" material="system/default.mats:glow-both-bright-player"
+	
+		pos-x="0"
+		pos-y="-height"
+	
+		angle="angle">
+		
+		<frame time="50">0 0 9 6</frame>
+		<frame time="200">16 0 9 6</frame>
+		<frame time="50">32 0 9 6</frame>
+		<frame time="50">48 0 9 6</frame>
+		<frame time="20">0 16 9 6</frame>
+	</sprite>
+	
+</effect>

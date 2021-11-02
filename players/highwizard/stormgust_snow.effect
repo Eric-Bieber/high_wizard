@@ -1,0 +1,15 @@
+<effect>
+	<param name="dir" default="1" />
+	<sprite looping="false" layer="2" origin="15 24" texture="./stormgust_snow.png" material="system/default.mats:bright-noxray-glowing"
+		color-r="1"
+		color-g="1"
+		color-b="1"
+		color-a="saturate(1-t)"
+
+		scale-x="saturate(0.8)"
+		scale-y="saturate(0.8)"
+		angle="pi*t*4*dir"
+	>
+		<frame time="1000">0 0 64 64</frame>
+	</sprite>
+</effect>

@@ -1,0 +1,23 @@
+<effect looping="false" layer="1">
+	<param name="angle" default="0" />
+	<param name="height" default="5" />
+	<sprite looping="false" origin="25 31" texture="./jupitel_thunder_wave.png" material="system/default.mats:glow-both-bright-player"
+		color-r="1"
+		color-g="1"
+		color-b="1"
+		color-a="1"
+		angle="angle"
+
+		pos-x="cos(angle)*6"
+		pos-y="sin(angle)*6"
+	>
+		<frame time="45">0 0 64 64</frame>
+		<frame time="45">64 0 64 64</frame>
+		<frame time="45">128 0 64 64</frame>
+		<frame time="45">192 0 64 64</frame>
+		<frame time="45">256 0 64 64</frame>
+		<frame time="45">320 0 64 64</frame>
+		<frame time="45">384 0 64 64</frame>
+		<frame time="45">448 0 64 64</frame>
+	</sprite>
+</effect>

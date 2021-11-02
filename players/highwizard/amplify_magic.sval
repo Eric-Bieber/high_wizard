@@ -1,0 +1,168 @@
+<dict>
+	<string name="name">.skills.sorcerer.comet</string>
+	<array name="icon">
+		<string>gui/icons_skills.png</string>
+		<int>100</int><vec4>24 48 24 24</vec4>
+	</array>
+
+	<array name="skills">
+		<null />
+		
+		<!-- Level 1 -->
+		<dict>
+			<string name="class">Skills::AmplifyMagic</string>
+
+			<float name="multiplier">1.5</float>
+			<float name="charge-time">1000</float>
+			<string name="fx">players/highwizard/amplify_magic.effect</string>
+			<string name="buff">players/highwizardbuffs.sval:amplify-hud</string>
+		</dict>
+		
+		<!-- Level 2 -->
+		<dict>
+			<string name="class">Skills::Firewall</string>
+			
+			<int name="cooldown">100</int>
+			<int name="castpoint">0</int>
+			
+			<string name="cursor-fx">players/highwizard/heavens_drive_cursor.effect</string>
+			<string name="snd">event:/player/sorcerer/shard_shoot</string>
+			<string name="anim">attack 8</string>
+			<float name="speed-mul">0.5</float>
+
+			<float name="max-range">100</float>
+
+            <int name="mana-cost">0</int>
+
+            <string name="unit">players/highwizard/firewall_node.unit</string>
+            <int name="width">3</int>
+            <bool name="remove-oldest">true</bool>
+            <int name="max-count">20</int>
+            <bool name="safe-spawn">true</bool>
+            <int name="spawn-dist">10</int>
+		</dict>
+		
+		<!-- Level 3 -->
+		<dict>
+			<string name="class">Skills::Firewall</string>
+			
+			<int name="cooldown">100</int>
+			<int name="castpoint">0</int>
+			
+			<string name="cursor-fx">players/highwizard/heavens_drive_cursor.effect</string>
+			<string name="snd">event:/player/sorcerer/shard_shoot</string>
+			<string name="anim">attack 8</string>
+			<float name="speed-mul">0.5</float>
+
+			<float name="max-range">100</float>
+
+            <int name="mana-cost">0</int>
+
+            <string name="unit">players/highwizard/firewall_node.unit</string>
+            <int name="width">5</int>
+            <bool name="remove-oldest">true</bool>
+            <int name="max-count">20</int>
+            <bool name="safe-spawn">true</bool>
+            <int name="spawn-dist">10</int>
+		</dict>
+		
+		<!-- Level 4 -->
+		<dict>
+			<string name="class">Skills::DropEffect</string>
+			
+			<int name="cooldown">400</int>
+			<int name="castpoint">250</int>
+			
+			<string name="snd">event:/player/sorcerer/comet_summon</string>
+			<string name="anim">cast 8</string>
+			<float name="speed-mul">0</float>
+			
+			<int name="mana-cost">40</int>
+			
+			<int name="drop-dist">50</int>
+			<string name="drop-fx">effects/players/comet.effect</string>
+			<string name="dropped-fx">effects/players/comet_hit.effect</string>
+			
+			<int name="radius">28</int>
+			
+			<array name="effects">
+				<dict>
+					<string name="class">ApplyBuff</string>
+					<string name="buff">players/buffs.sval:freeze-4</string>
+					<bool name="ignore-intensity">true</bool>
+				</dict>
+				<dict>
+					<string name="class">Damage</string>
+					<int name="physical">80</int>
+					<int name="magical">80</int>
+				</dict>
+			</array>
+		</dict>
+		
+		<!-- Level 5 -->
+		<dict>
+			<string name="class">Skills::DropEffect</string>
+			
+			<int name="cooldown">400</int>
+			<int name="castpoint">250</int>
+			
+			<string name="snd">event:/player/sorcerer/comet_summon</string>
+			<string name="anim">cast 8</string>
+			<float name="speed-mul">0</float>
+			
+			<int name="mana-cost">45</int>
+			
+			<int name="drop-dist">50</int>
+			<string name="drop-fx">effects/players/comet.effect</string>
+			<string name="dropped-fx">effects/players/comet_hit.effect</string>
+			
+			<int name="radius">28</int>
+			
+			<array name="effects">
+				<dict>
+					<string name="class">ApplyBuff</string>
+					<string name="buff">players/buffs.sval:freeze-5</string>
+					<bool name="ignore-intensity">true</bool>
+				</dict>
+				<dict>
+					<string name="class">Damage</string>
+					<int name="physical">100</int>
+					<int name="magical">100</int>
+				</dict>
+			</array>
+		</dict>
+		
+		<!-- Level 6 -->
+		<dict>
+			<string name="class">Skills::DropEffect</string>
+			
+			<int name="cooldown">400</int>
+			<int name="castpoint">250</int>
+			
+			<string name="snd">event:/player/sorcerer/comet_summon</string>
+			<string name="anim">cast 8</string>
+			<float name="speed-mul">0</float>
+			
+			<int name="mana-cost">50</int>
+			
+			<int name="drop-dist">50</int>
+			<string name="drop-fx">effects/players/comet.effect</string>
+			<string name="dropped-fx">effects/players/comet_hit.effect</string>
+			
+			<int name="radius">28</int>
+			
+			<array name="effects">
+				<dict>
+					<string name="class">ApplyBuff</string>
+					<string name="buff">players/buffs.sval:freeze-6</string>
+					<bool name="ignore-intensity">true</bool>
+				</dict>
+				<dict>
+					<string name="class">Damage</string>
+					<int name="physical">120</int>
+					<int name="magical">120</int>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>

@@ -1,0 +1,159 @@
+<unit netsync="position" slot="item">
+	<scenes start="">        
+
+        <!-- ONE -->
+        <scene name="one-0">
+            <sprite looping="true" origin="7 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">0 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="one-7">
+            <sprite looping="true" origin="7 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">0 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="one-6">
+            <sprite looping="true" origin="7 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">0 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="one-5">
+            <sprite looping="true" origin="7 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">0 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="one-4">
+            <sprite looping="true" origin="7 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">0 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="one-3">
+            <sprite looping="true" origin="7 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">0 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="one-2">
+            <sprite looping="true" origin="7 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">0 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="one-1">
+            <sprite looping="true" origin="7 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">0 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <!-- THREE -->
+        %// E
+        <scene name="three-0">
+            <sprite looping="true" origin="7 19" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">64 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        %// NW
+        <scene name="three-7">
+            <sprite looping="true" origin="16 16" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">192 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        %// N
+        <scene name="three-6">
+            <sprite looping="true" origin="19 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">128 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        %// NE
+        <scene name="three-5">
+            <sprite looping="true" origin="16 16" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">256 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        %// W
+        <scene name="three-4">
+            <sprite looping="true" origin="7 19" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">64 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        %// SE
+        <scene name="three-3">
+            <sprite looping="true" origin="16 16" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">192 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        %// S
+        <scene name="three-2">
+            <sprite looping="true" origin="19 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">128 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        %// SW
+        <scene name="three-1">
+            <sprite looping="true" origin="16 16" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">256 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <!-- FIVE -->
+        <scene name="five-0">
+            <sprite looping="true" origin="7 31" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">384 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="five-7">
+            <sprite looping="true" origin="25 25" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">448 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="five-6">
+            <sprite looping="true" origin="31 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">320 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="five-5">
+            <sprite looping="true" origin="25 25" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">0 64 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="five-4">
+            <sprite looping="true" origin="7 31" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">384 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="five-3">
+            <sprite looping="true" origin="25 25" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">448 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="five-2">
+            <sprite looping="true" origin="31 7" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">320 0 64 64</frame>
+            </sprite>
+        </scene>
+
+        <scene name="five-1">
+            <sprite looping="true" origin="25 25" texture="./firewall_cursor.tif" material="system/default.mats:player">
+                <frame time="100">0 64 64 64</frame>
+            </sprite>
+        </scene>
+    </scenes>
+</unit>
