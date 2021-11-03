@@ -3,13 +3,13 @@
 		<string>players/highwizard/heavens_drive.sval</string>
 		<string>players/highwizard/firewall.sval</string>
 		<string>players/highwizard/jupitel_thunder.sval</string>
-		<string>players/highwizard/orb_of_winter.sval</string>
+		<string>players/highwizard/stormgust.sval</string>
 		
 		<string>players/highwizard/soulstrike.sval</string>
 		<string>players/highwizard/ice_barrier.sval</string>
-		<string>players/highwizard/shatter.sval</string>
+		<string>players/highwizard/amplify_magic.sval</string>
 	</array>
-
+%//firewall.sval
 	<int name="face-y">48</int>
 	<int name="face-count">5</int>
 

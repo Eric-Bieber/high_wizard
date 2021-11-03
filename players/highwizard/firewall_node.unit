@@ -2,10 +2,10 @@
     <behavior class="PlayerOwnedSummon">
         <string name="team">player</string>
 
-        <int name="hp">100</int>
+        <int name="hp">50</int>
         <string name="type">construct</string>
         <int name="ttl">5000</int>
-        <bool name="targetable">true</bool>
+        <bool name="targetable">false</bool>
         <bool name="no-buffs">true</bool>
         <bool name="floating-hurt">true</bool>
 
@@ -19,8 +19,11 @@
                 <string name="class">FirewallAura</string>
                 <string name="buff">players/highwizardbuffs.sval:firewall-1</string>
                 <bool name="friendly">false</bool>
+                <string name="snd">sound/highwizard.sbnk:firewall_burn</string>
                 <int name="freq">.25</int>
                 <int name="range">10</int>
+                <float name="health-loss">0.025</float> 
+                %// .1 .05 .025
             </dict>
         </array>
 

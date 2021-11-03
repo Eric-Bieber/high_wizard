@@ -15,17 +15,17 @@
 			<int name="cooldown">300</int>
 			<int name="castpoint">0</int>
 			
-			<string name="fx">effects/players/slash_90.effect</string>
+			<string name="fx">players/highwizard/jupitel_thunder_wave.effect</string>
             <string name="hit-fx">players/highwizard/jupitel_thunder_lightning.effect</string>
-			<string name="snd">event:/player/paladin/sword_swing</string>
-			<string name="hit-snd">event:/player/paladin/sword_hit</string>
-            <string name="buff">players/highwizardbuffs.sval:jupitel_thunder-1</string>
+			<string name="snd">sound/highwizard.sbnk:jupitel_thunder</string>
+			<string name="hit-snd">sound/highwizard.sbnk:jupitel_thunder_hit</string>
+            <string name="buff">players/highwizardbuffs.sval:jupitel-thunder-1</string>
 			<string name="anim">attack 8</string>
 			<float name="speed-mul">1</float>
 
 			<int name="arc">90</int>
 			<int name="rays">100</int>
-			<int name="dist">30</int>
+			<int name="dist">40</int>
 			<int name="duration">120</int>
 		</dict>
 		

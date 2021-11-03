@@ -29,6 +29,8 @@ namespace Skills {
 
 		vec3 m_maxCastPosition;
 
+		vec3 m_calcMousePos;
+
 		HeavensDrive(UnitPtr unit, SValue& params) {
 			super(unit, params);
 
@@ -66,12 +68,15 @@ namespace Skills {
             m_unitPos = unitPos;
 			builder.PushVector3(unitPos);
 
-            if (m_units.length() < m_maxCount && m_insideRange) {
-                SpawnUnit(m_currentMousePos, m_target);
+            if (m_units.length() < m_maxCount) {
+            	if (m_insideRange) {
+                	SpawnUnit(m_currentMousePos, m_target);
+	            } else {
+	            	SpawnUnit(m_maxCastPosition, m_target);
+	            }
             } else {
-            	SpawnUnit(m_maxCastPosition, m_target);
-            	return;
-            }
+				return;
+			}
             
             PlaySkillEffect(target);
 		}
@@ -100,18 +105,17 @@ namespace Skills {
 
 			float distance = dist(xy(m_currentMousePos), xy(m_owner.m_unit.GetPosition()));
 			if (distance > m_maxRange) {
-				auto player = cast<PlayerBase>(m_owner.m_unit.GetScriptBehavior());
-				float dir = player.m_dirAngle;
-				vec2 rayDir = vec2(cos(dir), sin(dir));
+				m_maxCastPosition = calcMaxPos();
 
-				m_maxCastPosition = m_owner.m_unit.GetPosition() + xyz(rayDir) * int(m_maxRange);
 				m_cursorFx_unit.SetPosition(m_maxCastPosition);
+				m_calcMousePos = m_maxCastPosition;
 				m_insideRange = false;
 			} else {
+				m_currentMousePos = checkWithinBounds(xy(m_currentMousePos));
 				m_cursorFx_unit.SetPosition(m_currentMousePos);
+				m_calcMousePos = m_currentMousePos;
 				m_insideRange = true;
 			}
-
 
 			for (int i = m_units.length() - 1; i >= 0; i--)
 			{
@@ -119,6 +123,15 @@ namespace Skills {
                     m_units.removeAt(i);
                 }
 			}
+		}
+
+		vec3 calcMaxPos() {
+			auto player = cast<PlayerBase>(m_owner.m_unit.GetScriptBehavior());
+			float dir = player.m_dirAngle;
+			vec2 rayDir = vec2(cos(dir), sin(dir));
+
+			vec3 maxPos = m_owner.m_unit.GetPosition() + xyz(rayDir) * int(m_maxRange);
+			return checkWithinBounds(xy(maxPos));
 		}
 
 		UnitPtr SpawnUnit(vec3 pos, vec2 target)
@@ -146,12 +159,23 @@ namespace Skills {
 			return unit;
 		}
 
+		vec3 checkWithinBounds(vec2 toLocation) {
+			vec2 fromLocation = xy(m_owner.m_unit.GetPosition());
+			
+			auto results = g_scene.Raycast(fromLocation, toLocation, ~0, RaycastType::Aim);
+			if (results.length() > 0)
+			{	
+				RaycastResult res = results[0];
+
+				toLocation = res.point;
+
+				return xyz(toLocation);
+			}
+			return xyz(toLocation);
+		}
+
 		void StartCursorEffect()
 		{
-			auto player = cast<PlayerBase>(m_owner.m_unit.GetScriptBehavior());
-			float dir = player.m_dirAngle;
-			vec2 aimDir = vec2(cos(dir), sin(dir));
-
 			vec2 pos = (GetGameModeMousePosition() / g_gameMode.m_wndScale);
 
 			m_cursorFx_unit = PlayEffect(m_cursorFx, pos);

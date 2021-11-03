@@ -10,7 +10,7 @@
             </dict>
         </dict>
     </dict>
-
+    
     <dict name="firewall-1">
         <int name="duration">1000</int>
 
@@ -23,17 +23,62 @@
         </dict>
     </dict>
 
-    <dict name="jupitel_thunder-1">
+    <dict name="stormgust-1">
+        <string name="name">stormgust</string>
+        <int name="duration">1000</int>
+
+        <float name="speed-mul">.6</float>
+
+        <dict name="tick">
+            <int name="freq">1000</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">10</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="stormgust-freeze">
+        <string name="name">stormgust-freeze</string>
+        <int name="duration">2000</int>
+        <!--<array name="tags">
+            <string>frozen</string>
+            <string>stun</string>
+        </array>-->
+
+        <bool name="debuff">true</bool>
+        <string name="icon">doodads/special/icons/freeze.unit</string>
+        <float name="speed-mul">0</float>
+        <bool name="disarm">true</bool>
+        <bool name="shatterable">true</bool>
+        
+        <array name="colors">
+            <vec4>0 0 0.025 1</vec4>
+            <vec4>0 0 1 1</vec4>
+            <vec4>0.9 0.9 1 1</vec4>
+        </array>
+    </dict>
+
+    <dict name="jupitel-thunder-1">
         <int name="duration">500</int>
         <float name="speed-mul">0</float>
         <bool name="disarm">true</bool>
 
         <dict name="tick">
-            <int name="freq">100</int>
+            <int name="freq">50</int>
             <dict name="effect">
                 <string name="class">CombustionDamage</string>
-                <int name="magical">5</int>
+                <int name="magical">1</int>
             </dict>
         </dict>
     </dict>
+
+    <dict name="amplify-hud">
+        <string name="name">amplify-hud</string>
+        <int name="duration">300000</int>
+        <array name="hud">
+            <string>gui/icons_buffs.png</string>
+            <int>100</int><vec4>0 0 12 12</vec4>
+        </array>
+    </dict>  
 </svals>

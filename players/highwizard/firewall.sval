@@ -15,17 +15,20 @@
 			<int name="cooldown">100</int>
 			<int name="castpoint">0</int>
 			
-			<string name="cursor-fx">players/highwizard/heavens_drive_cursor.effect</string>
-			<string name="snd">event:/player/sorcerer/shard_shoot</string>
+			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
 			<string name="anim">attack 8</string>
 			<float name="speed-mul">0.5</float>
+
+			<string name="one">one 8</string>
+            <string name="three">three 8</string>
+            <string name="five">five 8</string>
 
 			<float name="max-range">100</float>
 
             <int name="mana-cost">0</int>
 
             <string name="unit">players/highwizard/firewall_node.unit</string>
-            <int name="width">1</int>
+            <int name="width">5</int>
             <bool name="remove-oldest">true</bool>
             <int name="max-count">20</int>
             <bool name="safe-spawn">true</bool>

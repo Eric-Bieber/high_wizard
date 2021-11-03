@@ -1,5 +1,5 @@
-<effect looping="true">
-	<sprite looping="false" layer="2" origin="16 16" texture="./heavens_drive_cursor_2.png" material="system/default.mats:bright-noxray-glowing"
+<effect looping="false">
+	<sprite looping="true" layer="2" origin="16 16" texture="./heavens_drive_cursor.png" material="system/default.mats:bright-noxray-glowing"
 		color-r="1"
 		color-g="1"
 		color-b="1"

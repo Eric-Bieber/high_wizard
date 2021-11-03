@@ -17,40 +17,93 @@ ability 3 (storm gust 0:03):
 passive 1 (soul strike, 2:48): 
 - fires off "whispy lasers" every x scaling amount of time based off level
 
-passive 2 (amp magic): 
-- quagmire (aoe slow spell)
+passive 2 (quagmire): 
+- aoe slow spell
 
-passive 3:
+passive 3 (amp magic):
 - standing still for 1 second causes the spell to cast, 1.5x next spells damage
 
-
 Completion list:
-auto attack 
+
+Overall:
+- major balancing needed
+- character spritework
+	- coloring
+- character portraits
+- multiplayer bug fixing u g h
+
+auto attack (80%):
+- basic functionality ✓
+	- ice crack ✓
+- sound ✓
+- ability sprite
 - tiers
-	buff tiers
-	ability tiers
-- grayscale rock animation
-- sound
+	- buff tiers
+	- ability tiers
 - get "okay" for finished ability
 
-ability 2:
+ability 2 (80%):
+- basic functionality ✓
+	- cursor for each wall width ✓
+	- each node has individual health ✓
+	- change so enemies don't stop to target it? ✓
+- sound ✓
+- ability sprite
 - tiers
-	buff tiers
-	ability tiers
-- sound
-- lighting on effect
+	- buff tiers
+	- ability tiers
+- get "okay" for finished ability
 
-ability 3:
-
-ability 4:
-
-passive 1:
-- functionally done
-- needs art
-- sound
+ability 3 (80%):
+- basic functionality ✓
+	- lightning push ✓
+	- lightning on target ✓
+	- ice crack ✓
+- sound ✓
+- ability sprite
 - tiers
+	- buff tiers
+	- ability tiers
+- get "okay" for finished ability
 
+ability 4 (80%):
+- basic functionality ✓
+	- slow then freeze enemies ✓
+- blizzard effect ✓
+- sound ✓
+- ability sprite
+- tiers
+	- buff tiers
+	- ability tiers
+- get "okay" for finished ability
 
-passive 2:
+passive 1 (70%):
+- basic functionality ✓
+	- make it fire once at a time, per interval ✓
+	- no collision on projectiles ✓
+- whispy effect ✓
+- sound ~~
+- ability sprite
+- tiers
+	- ability tiers
+- get "okay" for finished ability
 
-passive 3:
+passive 2 (0%):
+- basic functionality
+- bog effect
+- sound
+- ability sprite
+- tiers
+	- buff tiers
+	- ability tiers
+- get "okay" for finished ability
+
+passive 3 (60%):
+- basic functionality ✓
+- power up effect ✓
+- buff (working, needs GUI element) ~~
+- ?sound?
+- ability sprite
+- tiers
+	- ability tiers
+- get "okay" for finished ability

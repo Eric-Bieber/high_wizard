@@ -16,7 +16,7 @@
 			<int name="castpoint">0</int>
 			
 			<string name="cursor-fx">players/highwizard/heavens_drive_cursor.effect</string>
-			<string name="snd">event:/player/sorcerer/shard_shoot</string>
+			<string name="snd">sound/highwizard.sbnk:heavens_drive</string>
 			<string name="anim">attack 8</string>
 			<float name="speed-mul">0.5</float>
 

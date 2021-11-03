@@ -11,9 +11,10 @@
 		<!-- Level 1 -->
 		<dict>
 			<string name="class">Skills::SoulStrike</string>
-			<string name="fire-snd">event:/player/sorcerer/shard_shoot</string>
+			<string name="fire-snd">sound/highwizard.sbnk:soulstrike_projectile</string>
 			<int name="range">100</int>
 			<float name="interval">3000</float>
+			<float name="between-shots">100</float>
 			<int name="num-projectiles">5</int>
 			<int name="min-targets">3</int>
 			<string name="projectile">players/highwizard/soulstrike_1.unit</string>

@@ -12,11 +12,14 @@ class SoulStrikeProjectile : RayProjectile
 
 	UnitPtr m_target;
 
+	string fade_fx;
+
 //Constructor
 	SoulStrikeProjectile(UnitPtr unit, SValue& params)
 	{
 		//Parent Constructor (anim)
 		super(unit, params);
+		fade_fx = GetParamString(unit, params, "fade-fx", false);
 		
 		//Overwrite
 		m_seekTurnSpeed = TURN_SPEED_STANDARD;
@@ -27,6 +30,14 @@ class SoulStrikeProjectile : RayProjectile
 
 	void setTarget(UnitPtr target) {
 		m_target = target;
+	}
+
+	void Collide(UnitPtr unit, vec2 pos, vec2 normal) override
+	{
+		//if (!ShouldCollide(unit))
+		//	return;
+		
+		HitUnit(unit, pos, normal, m_selfDmg, m_bounceOnCollide);
 	}
 	
 //Overrides
@@ -58,14 +69,15 @@ class SoulStrikeProjectile : RayProjectile
 		for (uint i = 0; i < results.length(); i++)
 		{
 			RaycastResult res = results[i];
-			if (!HitUnit(res.FetchUnit(g_scene), res.point, res.normal, m_selfDmg, true))
+			if (!HitUnit(res.FetchUnit(g_scene), res.point, res.normal, m_selfDmg, false))
 				return;
 				
 			if (m_unit.IsDestroyed())
 				return;
 		}
-	
+
 		m_unit.SetPosition(m_pos.x, m_pos.y, 0, true);
+		PlayEffect(fade_fx, m_pos, m_effectParams);		
 
 		UpdateSpeed(m_dir, dt);
 

@@ -33,9 +33,18 @@ namespace Skills
 		int distance = 5;
 
 		array<UnitPtr> m_hits;
+		array<UnitPtr> canPush;
+
+		vec2 m_dirHit;
 
 		ActorBuffDef@ m_buff;
-		
+
+		int repeat = 0;
+
+		vec2 start_dir;
+
+		float m_multiplier = 1;
+
 		JupitelThunder(UnitPtr unit, SValue& params)
 		{
 			super(unit, params);
@@ -95,64 +104,52 @@ namespace Skills
 				m_intervalC = 0;
 				m_angleStart = atan(dir.y, dir.x) + m_angleOffset;
 				m_angle = m_angleStart + randf() * m_angleDelta;
-				m_arrHit.removeRange(0, m_arrHit.length());
+				//m_arrHit.removeRange(0, m_arrHit.length());
 				m_husk = husk;
 				m_fxCountC = m_fxCount;
+				start_dir = dir;
 				
-				if (m_fxStart)
-					PlaySkillEffect(dir, { { "length", int(m_dist * m_distMul) } });
+				if (m_fxStart) {
+					auto player = cast<PlayerBase>(m_owner.m_unit.GetScriptBehavior());
+					PlaySkillEffect(dir, { { "angle", atan(dir.y, dir.x) } });
+				}
 			}
-		}
-
-		vec3 findDisplacement(float dir) {
-			// S
-			if (dir >= 1.18 && dir < 1.96) {
-				return vec3(0, -distance, 0);
-			}
-
-			// SW
-			if (dir >= 1.96 && dir < 2.75) {
-				return vec3(distance, -distance, 0);
-			}
-			
-			// W
-			if (dir >= 2.75 || dir < -2.75) {
-				return vec3(distance, 0, 0);
-			}
-
-			// NW
-			if (dir >= -2.75 && dir < -1.96) {
-				return vec3(distance, distance, 0);
-			}
-
-			// N
-			if (dir >= -1.96 && dir < -1.18) {
-				return vec3(0, distance, 0);
-			}
-
-			// NE
-			if (dir >= -1.18 && dir < -.38) {
-				return vec3(-distance, distance, 0);
-			}
-
-			// E
-			if (dir >= -.38 && dir < .39) {
-				return vec3(-distance, 0, 0);
-			}
-
-			// SE
-			if (dir >= .39 && dir < 1.18) {
-				return vec3(-distance, -distance, 0);
-			}	
-			return vec3(0,0,0);
 		}
 
 		void DoUpdate(int dt) override
 		{
+			if (canPush.length() > 0) {
+
+				for (uint i = 0; i < canPush.length(); i++) {
+					auto input = GetInput();
+
+					vec2 fromLocation = xy(canPush[i].GetPosition());
+					vec2 toLocation = fromLocation + m_dirHit * distance;
+					
+					auto results = g_scene.Raycast(fromLocation, toLocation, ~0, RaycastType::Any);
+					if (results.length() > 0)
+					{	
+						RaycastResult res = results[0];
+							
+						toLocation = res.point;
+					}
+
+					canPush[i].SetPosition(xyz(toLocation));
+					m_hits[i].SetPosition(canPush[i].GetPosition());
+				}
+				
+				repeat++;
+			}
+
+			if (repeat > 15) {
+				canPush.removeRange(0, canPush.length());
+				m_hits.removeRange(0, m_hits.length());
+				repeat = 0;
+			}
+
 			if (m_raysC <= 0)
 				return;
 
-			
 			m_intervalC -= dt;
 			while (m_intervalC <= 0)
 			{
@@ -228,25 +225,37 @@ namespace Skills
 						continue;
 					}
 					
-					vec2 dir = normalize(xy(m_owner.m_unit.GetPosition()) - upos);
+					vec2 dir = normalize(xy(m_owner.m_unit.GetPosition()) - upos);					
+
 					ApplyEffects(m_effects, m_owner, unit, upos, dir, 1.0, m_husk, 0, 0); // self/team/enemy dmg
 					
 					auto actor = cast<Actor>(unit.GetScriptBehavior());
 					auto behavior = cast<CompositeActorBehavior>(actor);
 
-					actor.ApplyBuff(ActorBuff(behavior, m_buff, 1.0f, false));
+					auto player = cast<PlayerBase>(m_owner.m_unit.GetScriptBehavior());
+					auto amp = cast<Skills::AmplifyMagic>(player.m_skills[6]);
+
+					if (amp !is null) {
+						m_multiplier *= amp.m_multiplier;
+					}
+
+					bool frozen = false;
+					for (uint j = 0; j < behavior.m_buffs.m_buffs.length(); j++) {
+						if(behavior.m_buffs.m_buffs[j].m_def.m_name == "stormgust-freeze") {
+							actor.ApplyBuff(ActorBuff(behavior, m_buff, 2.0f * m_multiplier, false));
+							frozen = true;
+						}
+					}
+					if (!frozen) {
+						actor.ApplyBuff(ActorBuff(behavior, m_buff, 1.0f * m_multiplier, false));
+					}
 
 					if (behavior.m_target !is null && behavior.m_enemyType != "construct" && !behavior.m_hasBossBar &&
 						Reflect::GetTypeName(behavior.m_movement) != "PassiveMovement") { 
+						canPush.insertLast(unit);
 
-						vec3 temp_dir = behavior.m_target.m_unit.GetPosition() - unit.GetPosition();
-						float m_dir = atan(temp_dir.y, temp_dir.x);
-						vec3 displacement = findDisplacement(m_dir);
-						
-						for (uint j = 0; j < 10; j++)  {
-							if (behavior.m_movement.OnCollide())
-							unit.SetPosition(unit.GetPosition() + displacement);
-						}
+						auto input = GetInput();
+						m_dirHit = input.AimDir;
 					}
 
 					dictionary ePs = { { 'angle', m_angle } };
@@ -259,26 +268,22 @@ namespace Skills
 
 				if (hitSomething)
 					PlaySound3D(m_hitSnd, m_owner.m_unit.GetPosition());
-
-				for (uint i = 0; i < m_hits.length(); i++) {
-					m_hits[i].SetPosition(m_arrHit[i].GetPosition());
-				}
-						
+				
 				if (--m_raysC <= 0)
-				{
+				{					
 					m_arrHit.removeRange(0, m_arrHit.length());
-					m_hits.removeRange(0, m_hits.length());
-					
+
 					if (--m_swingsC > 0)
 					{
 						m_raysC = m_rays;
 						m_intervalC = 0;
 						m_angle = m_angleStart + randf() * m_angleDelta;
 
-						PlaySkillEffect(vec2(cos(m_angle - m_angleOffset), sin(m_angle - m_angleOffset)), { { "length", dist(ownerPos, endPoint) } });
+						PlaySkillEffect(vec2(cos(m_angle - m_angleOffset), sin(m_angle - m_angleOffset)), { { "angle", atan(start_dir.y, start_dir.x) } });
 					}
-					else if (--m_fxCountC >= 0)
-						PlaySkillEffect(vec2(cos(m_angle - m_angleOffset), sin(m_angle - m_angleOffset)), { { "length", dist(ownerPos, endPoint) } });
+					else if (--m_fxCountC >= 0) {
+						PlaySkillEffect(vec2(cos(m_angle - m_angleOffset), sin(m_angle - m_angleOffset)), { { "angle", atan(start_dir.y, start_dir.x) } });
+					}
 					
 					return;
 				}

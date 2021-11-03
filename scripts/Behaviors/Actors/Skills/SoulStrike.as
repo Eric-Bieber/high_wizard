@@ -11,9 +11,15 @@ namespace Skills {
 		float shot_interval_orig;
 		float shot_interval_temp;
 
+        float m_betweenShotInterval;
+        float m_betweenShotIntervalC;
+
 		vec2 m_ownerPos;
 
 		array<UnitPtr> m_targets;
+
+        int m_shots;
+        bool m_shooting = false;
 
 		SoulStrike(UnitPtr unit, SValue& params)
 		{
@@ -28,17 +34,37 @@ namespace Skills {
 
             shot_interval_orig = GetParamFloat(unit, params, "interval", false, 5000.0f);
             shot_interval_temp = shot_interval_orig;
+
+            m_betweenShotInterval = GetParamFloat(unit, params, "between-shots", false, 100.0f);
+            m_betweenShotIntervalC = m_betweenShotInterval;
 		}
 
 		void Update(int dt, bool walking) override
 		{
+            if (m_shooting) {
+                m_betweenShotIntervalC -= dt;
+                if (m_betweenShotIntervalC < 0)  {
+                    m_shots++;
+                    m_betweenShotIntervalC = m_betweenShotInterval;
+
+                    ShootProjectile(m_shots-1); 
+
+                    if (m_shots == m_targets.length()) {
+                        m_targets.removeRange(0, m_targets.length()); 
+                        m_shooting = false;
+                        m_shots = 0;
+                    }
+                    return;
+                }
+            }
+
 			shot_interval_temp -= dt;
 			if (shot_interval_temp < 0) {
 				findTargets();
 				if (m_targets.length() >= m_minimumTargets) {
 					shot_interval_temp = shot_interval_orig;
 
-					ShootProjectiles(); 
+                    m_shooting = true;
 				}
 			}
 		}
@@ -85,7 +111,6 @@ namespace Skills {
                 for (uint j = 0; j < results.length(); j++) {
                 	for (uint k = 0; k < m_targets.length(); k++) {
                 		if (m_targets[k] == results[i]) {
-	                		//print("Found copy");
 	                		found = true;
 	                		break;
 	                	}
@@ -97,39 +122,33 @@ namespace Skills {
                 if (!found)
                 	m_targets.insertLast(results[i]);
             }
-            //print(m_targets.length());
         }
 
-		void ShootProjectiles() {
-        	for (uint i = 0; i < m_targets.length(); i++) {
-        		vec2 targetPos = GetTargetPosition(i);
-    			vec2 targetDirection = normalize(targetPos - m_ownerPos);
+		void ShootProjectile(int i) {
+    		vec2 targetPos = GetTargetPosition(i);
+			vec2 targetDirection = normalize(targetPos - m_ownerPos);
 
-    			auto proj = ProduceProjectile(m_ownerPos);
-                if (!proj.IsValid())
-                    return;
+			auto proj = ProduceProjectile(m_ownerPos);
+            PlaySound3D(m_snd, m_owner.m_unit.GetPosition());
+            if (!proj.IsValid())
+                return;
 
-                auto p = cast<SoulStrikeProjectile>(proj.GetScriptBehavior());
-                if (p is null)
-                    return;
-                //vec2(-targetDirection.x, -targetDirection.y)
-                p.Initialize(m_owner, findProjectileDirection(i+1), 1.0f, false, m_targets[i], 0);
-                p.setTarget(m_targets[i]);
-                //m_fire = PlayEffect(m_firefx, m_ownerPos);
-                //auto behavior = cast<EffectBehavior>(m_fire.GetScriptBehavior());
-                //behavior.m_looping = true;
+            auto p = cast<SoulStrikeProjectile>(proj.GetScriptBehavior());
+            if (p is null)
+                return;
 
-                auto pp = cast<Projectile>(p);
-                if (pp !is null)
-                    pp.m_liveRangeSq *= m_range;
-        	}      
-        	m_targets.removeRange(0, m_targets.length()); 
+            p.Initialize(m_owner, findProjectileDirection(i+1), 1.0f, false, m_targets[i], 0);
+            p.setTarget(m_targets[i]);
+
+            auto pp = cast<Projectile>(p);
+            if (pp !is null)
+                pp.m_liveRangeSq *= m_range;   
 		}
 
 		vec2 findProjectileDirection(int num) {
 			auto player = cast<PlayerBase>(m_owner.m_unit.GetScriptBehavior());
-			float dir = (-player.m_dirAngle * 2) / (m_targets.length() / num);
-			return vec2(cos(dir), sin(dir));
+			float dir = (player.m_dirAngle) / (m_targets.length() / num);
+			return vec2(cos(dir), sin(dir)) * -10;
 		}
 	}
 }
