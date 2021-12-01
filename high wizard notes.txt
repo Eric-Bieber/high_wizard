@@ -31,79 +31,89 @@ Overall:
 	- coloring
 - character portraits
 - multiplayer bug fixing u g h
+- character lang file
+- titles
 
-auto attack (80%):
+auto attack (95%):
 - basic functionality ✓
 	- ice crack ✓
 - sound ✓
-- ability sprite
-- tiers
-	- buff tiers
-	- ability tiers
+- ability sprite ✓?
+- tiers ✓
+	- buff tiers ✓
+	- ability tiers ✓
+- balance
 - get "okay" for finished ability
 
-ability 2 (80%):
+ability 2 (95%):
 - basic functionality ✓
 	- cursor for each wall width ✓
 	- each node has individual health ✓
 	- change so enemies don't stop to target it? ✓
 - sound ✓
-- ability sprite
-- tiers
-	- buff tiers
-	- ability tiers
+- ability sprite ✓
+- tiers ✓
+	- buff tiers ✓
+	- ability tiers ✓
+- balance
 - get "okay" for finished ability
 
-ability 3 (80%):
+ability 3 (95%):
 - basic functionality ✓
 	- lightning push ✓
 	- lightning on target ✓
 	- ice crack ✓
 - sound ✓
-- ability sprite
-- tiers
-	- buff tiers
-	- ability tiers
+- ability sprite ✓
+- tiers ✓
+	- buff tiers ✓
+	- ability tiers ✓
+- balance
 - get "okay" for finished ability
 
-ability 4 (80%):
+ability 4 (95%):
 - basic functionality ✓
 	- slow then freeze enemies ✓
 - blizzard effect ✓
 - sound ✓
-- ability sprite
-- tiers
-	- buff tiers
-	- ability tiers
+- ability sprite ✓
+- tiers ✓
+	- buff tiers ✓
+	- ability tiers ✓
+- balance
 - get "okay" for finished ability
 
-passive 1 (70%):
+passive 1 (95%):
 - basic functionality ✓
 	- make it fire once at a time, per interval ✓
 	- no collision on projectiles ✓
 - whispy effect ✓
-- sound ~~
-- ability sprite
-- tiers
-	- ability tiers
+- sound ✓
+- ability sprite ✓
+- tiers ✓
+	- ability tiers ✓
+- balance
 - get "okay" for finished ability
 
-passive 2 (0%):
-- basic functionality
-- bog effect
-- sound
+passive 2 (85%):
+- basic functionality ✓
+- bog effect ✓
+- sound 
 - ability sprite
 - tiers
-	- buff tiers
-	- ability tiers
+	- buff tiers ✓
+	- ability tiers ✓
+- balance
 - get "okay" for finished ability
 
-passive 3 (60%):
+passive 3 (95%):
 - basic functionality ✓
 - power up effect ✓
-- buff (working, needs GUI element) ~~
-- ?sound?
-- ability sprite
-- tiers
-	- ability tiers
+- buff ✓
+	- buff sprite ✓
+- sound ✓
+- ability sprite ✓
+- tiers ✓
+	- ability tiers ✓
+- balance
 - get "okay" for finished ability

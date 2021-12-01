@@ -1,0 +1,121 @@
+<dict>
+	<string name="name">.skills.techpriest.incense-candles</string>
+	<array name="icon">
+		<string>gui/highpriest_skills.png</string>
+		<int>100</int><vec4>120 0 24 24</vec4>
+	</array>
+
+	<array name="skills">
+		<null />
+		
+		<!-- Level 1 -->
+        <dict>
+            <string name="class">Skills::PassiveSkill</string>
+            <array name="modifiers">
+                <dict>
+                    <string name="class">Modifiers::TriggerEffect</string>
+                    <string name="trigger">hurt</string>
+                    <float name="chance">1</float>
+                    <bool name="target-self">true</bool>
+                    <array name="effects">
+                        <dict name="effect">
+                            <string name="class">SpawnUnit</string>
+                            <string name="unit">players/highwizard/quagmire_area_1.unit</string>
+                            <bool name="safe-spawn">false</bool>
+                            <int name="spawn-dist">0</int>
+                            <vec2 name="offset">0 0</vec2>
+                        </dict>
+                    </array>
+                </dict>
+            </array>
+		</dict>
+		
+		<!-- Level 2 -->
+        <dict>
+            <string name="class">Skills::PassiveSkill</string>
+            <array name="modifiers">
+                <dict>
+                    <string name="class">Modifiers::TriggerEffect</string>
+                    <string name="trigger">kill</string>
+                    <float name="chance">.15</float>
+                    <bool name="target-self">false</bool>
+                    <array name="effects">
+                        <dict name="effect">
+                            <string name="class">SpawnUnit</string>
+                            <string name="unit">players/techpriest/incense_candles_area_2.unit</string>
+                            <bool name="safe-spawn">false</bool>
+                            <int name="spawn-dist">0</int>
+                            <vec2 name="offset">0 0</vec2>
+                        </dict>
+                    </array>
+                </dict>
+            </array>
+        </dict>
+        
+		<!-- Level 3 -->
+        <dict>
+            <string name="class">Skills::PassiveSkill</string>
+            <array name="modifiers">
+                <dict>
+                    <string name="class">Modifiers::TriggerEffect</string>
+                    <string name="trigger">kill</string>
+                    <float name="chance">.2</float>
+                    <bool name="target-self">false</bool>
+                    <array name="effects">
+                        <dict name="effect">
+                            <string name="class">SpawnUnit</string>
+                            <string name="unit">players/techpriest/incense_candles_area_3.unit</string>
+                            <bool name="safe-spawn">false</bool>
+                            <int name="spawn-dist">0</int>
+                            <vec2 name="offset">0 0</vec2>
+                        </dict>
+                    </array>
+                </dict>
+            </array>
+        </dict>
+        
+		<!-- Level 4 -->
+        <dict>
+            <string name="class">Skills::PassiveSkill</string>
+            <array name="modifiers">
+                <dict>
+                    <string name="class">Modifiers::TriggerEffect</string>
+                    <string name="trigger">kill</string>
+                    <float name="chance">.25</float>
+                    <bool name="target-self">false</bool>
+                    <array name="effects">
+                        <dict name="effect">
+                            <string name="class">SpawnUnit</string>
+                            <string name="unit">players/techpriest/incense_candles_area_4.unit</string>
+                            <bool name="safe-spawn">false</bool>
+                            <int name="spawn-dist">0</int>
+                            <vec2 name="offset">0 0</vec2>
+                        </dict>
+                    </array>
+                </dict>
+            </array>
+        </dict>
+        
+		<!-- Level 5 -->
+        <dict>
+            <string name="class">Skills::PassiveSkill</string>
+            <array name="modifiers">
+                <dict>
+                    <string name="class">Modifiers::TriggerEffect</string>
+                    <string name="trigger">kill</string>
+                    <float name="chance">.30</float>
+                    <bool name="target-self">false</bool>
+                    <array name="effects">
+                        <dict name="effect">
+                            <string name="class">SpawnUnit</string>
+                            <string name="unit">players/techpriest/incense_candles_area_5.unit</string>
+                            <bool name="safe-spawn">false</bool>
+                            <int name="spawn-dist">0</int>
+                            <vec2 name="offset">0 0</vec2>
+                        </dict>
+                    </array>
+                </dict>
+            </array>
+        </dict>
+	</array>
+</dict>

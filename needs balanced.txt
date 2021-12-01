@@ -1,0 +1,17 @@
+Overall:
+- character stats
+- titles
+
+auto attack:
+
+ability 2:
+
+ability 3:
+
+ability 4:
+
+passive 1:
+
+passive 2:
+
+passive 3:

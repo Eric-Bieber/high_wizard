@@ -1,0 +1,45 @@
+<unit>
+    <behavior class="PlayerOwnedSummon">
+        <string name="team">player</string>
+
+        <int name="hp">100000</int>
+        <string name="type">construct</string>
+        <int name="ttl">3000</int>
+        <bool name="targetable">false</bool>
+        <bool name="no-buffs">true</bool>
+        <bool name="floating-hurt">false</bool>
+
+        <dict name="movement">
+            <string name="class">PassiveMovement</string>
+            <string name="anim-idle">idle</string>
+        </dict>
+
+        <array name="skills">
+            <dict>
+                <string name="class">Skills::StormGustAura</string>
+                <string name="buff">players/highwizardbuffs.sval:stormgust-2</string>
+                <string name="freeze-buff">players/highwizardbuffs.sval:stormgust-freeze</string>
+                <bool name="friendly">false</bool>
+                <int name="freq">.25</int>
+                <int name="range">30</int>
+            </dict>
+        </array>
+
+        <dict name="effect-params">
+        </dict>
+    </behavior>
+
+    <scenes start="loop">
+        <scene name="shared">
+            <collision static="true">
+                <circle offset="0 0" shoot-through="true" layer="-1" aim-through="true" radius="1" sensor="true" />
+            </collision>
+        </scene>
+
+        <scene name="loop">
+            <scene src="shared" />
+
+            <effect src="./stormgust.effect" />
+        </scene>
+    </scenes>
+</unit>

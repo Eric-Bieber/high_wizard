@@ -1,8 +1,8 @@
 <dict>
 	<string name="name">.skills.sorcerer.biting-chill</string>
 	<array name="icon">
-		<string>gui/icons_skills.png</string>
-		<int>100</int><vec4>48 48 24 24</vec4>
+		<string>gui/highpriest_skills.png</string>
+		<int>100</int><vec4>96 0 24 24</vec4>
 	</array>
 
 	<array name="skills">
@@ -15,175 +15,57 @@
 			<int name="range">100</int>
 			<float name="interval">3000</float>
 			<float name="between-shots">100</float>
-			<int name="num-projectiles">5</int>
+			<int name="num-projectiles">3</int>
 			<int name="min-targets">3</int>
 			<string name="projectile">players/highwizard/soulstrike_1.unit</string>
-			
 		</dict>
 		
 		<!-- Level 2 -->
 		<dict>
-			<string name="class">Skills::PassiveSkill</string>
-			<array name="modifiers">
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">hit</string>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:chill-2</string>
-					</dict>
-				</dict>
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">spellhit</string>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:chill-2</string>
-					</dict>
-				</dict>
-
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">hit</string>
-					<float name="chance">0.075</float>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:freeze-3</string>
-					</dict>
-				</dict>
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">spellhit</string>
-					<float name="chance">0.075</float>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:freeze-3</string>
-					</dict>
-				</dict>
-			</array>
+			<string name="class">Skills::SoulStrike</string>
+			<string name="fire-snd">sound/highwizard.sbnk:soulstrike_projectile</string>
+			<int name="range">100</int>
+			<float name="interval">3000</float>
+			<float name="between-shots">100</float>
+			<int name="num-projectiles">3</int>
+			<int name="min-targets">3</int>
+			<string name="projectile">players/highwizard/soulstrike_2.unit</string>
 		</dict>
+
 		<!-- Level 3 -->
 		<dict>
-			<string name="class">Skills::PassiveSkill</string>
-			<array name="modifiers">
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">hit</string>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:chill-3</string>
-					</dict>
-				</dict>
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">spellhit</string>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:chill-3</string>
-					</dict>
-				</dict>
-
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">hit</string>
-					<float name="chance">0.075</float>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:freeze-4</string>
-					</dict>
-				</dict>
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">spellhit</string>
-					<float name="chance">0.075</float>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:freeze-4</string>
-					</dict>
-				</dict>
-			</array>
+			<string name="class">Skills::SoulStrike</string>
+			<string name="fire-snd">sound/highwizard.sbnk:soulstrike_projectile</string>
+			<int name="range">100</int>
+			<float name="interval">3000</float>
+			<float name="between-shots">100</float>
+			<int name="num-projectiles">5</int>
+			<int name="min-targets">3</int>
+			<string name="projectile">players/highwizard/soulstrike_3.unit</string>
 		</dict>
+
 		<!-- Level 4 -->
 		<dict>
-			<string name="class">Skills::PassiveSkill</string>
-			<array name="modifiers">
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">hit</string>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:chill-4</string>
-					</dict>
-				</dict>
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">spellhit</string>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:chill-4</string>
-					</dict>
-				</dict>
-
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">hit</string>
-					<float name="chance">0.075</float>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:freeze-5</string>
-					</dict>
-				</dict>
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">spellhit</string>
-					<float name="chance">0.075</float>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:freeze-5</string>
-					</dict>
-				</dict>
-			</array>
+			<string name="class">Skills::SoulStrike</string>
+			<string name="fire-snd">sound/highwizard.sbnk:soulstrike_projectile</string>
+			<int name="range">100</int>
+			<float name="interval">3000</float>
+			<float name="between-shots">100</float>
+			<int name="num-projectiles">5</int>
+			<int name="min-targets">3</int>
+			<string name="projectile">players/highwizard/soulstrike_4.unit</string>
 		</dict>
+
 		<!-- Level 5 -->
 		<dict>
-			<string name="class">Skills::PassiveSkill</string>
-			<array name="modifiers">
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">hit</string>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:chill-5</string>
-					</dict>
-				</dict>
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">spellhit</string>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:chill-5</string>
-					</dict>
-				</dict>
-
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">hit</string>
-					<float name="chance">0.075</float>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:freeze-6</string>
-					</dict>
-				</dict>
-				<dict>
-					<string name="class">Modifiers::TriggerEffect</string>
-					<string name="trigger">spellhit</string>
-					<float name="chance">0.075</float>
-					<dict name="effect">
-						<string name="class">ApplyBuff</string>
-						<string name="buff">players/buffs.sval:freeze-6</string>
-					</dict>
-				</dict>
-			</array>
+			<string name="class">Skills::SoulStrike</string>
+			<string name="fire-snd">sound/highwizard.sbnk:soulstrike_projectile</string>
+			<int name="range">100</int>
+			<float name="interval">3000</float>
+			<float name="between-shots">100</float>
+			<int name="num-projectiles">7</int>
+			<int name="min-targets">3</int>
+			<string name="projectile">players/highwizard/soulstrike_5.unit</string>
 		</dict>
 	</array>
 </dict>

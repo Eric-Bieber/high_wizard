@@ -16,6 +16,8 @@ namespace Skills {
 
 		ActorBuffDef@ m_buff;
 
+		SoundEvent@ m_snd;
+
 		AmplifyMagic(UnitPtr unit, SValue& params) {
 			super(unit, params);
 
@@ -27,6 +29,8 @@ namespace Skills {
 			m_fx = GetParamString(unit, params, "fx", false, "");
 
 			@m_buff = LoadActorBuff(GetParamString(unit, params, "buff", true));
+
+			@m_snd = Resources::GetSoundEvent(GetParamString(unit, params, "snd", false));
 		}
 
 		void Update(int dt, bool walking) override 
@@ -55,6 +59,7 @@ namespace Skills {
 				if (m_fxUnit.IsValid()) {
 					m_fxUnit.Destroy();
 				}
+				PlaySound3D(m_snd, m_owner.m_unit.GetPosition());
 				m_fxUnit = PlayEffect(m_fx, m_owner.m_unit.GetPosition());
 				@m_fxBehavior = cast<EffectBehavior>(m_fxUnit.GetScriptBehavior());
 

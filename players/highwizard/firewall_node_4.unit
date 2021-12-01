@@ -1,0 +1,47 @@
+<unit>
+    <behavior class="PlayerOwnedSummon">
+        <string name="team">player</string>
+
+        <int name="hp">50</int>
+        <string name="type">construct</string>
+        <int name="ttl">5000</int>
+        <bool name="targetable">false</bool>
+        <bool name="no-buffs">true</bool>
+        <bool name="floating-hurt">true</bool>
+
+        <dict name="movement">
+            <string name="class">PassiveMovement</string>
+            <string name="anim-idle">idle</string>
+        </dict>
+
+        <array name="skills">
+            <dict>
+                <string name="class">FirewallAura</string>
+                <string name="buff">players/highwizardbuffs.sval:firewall-4</string>
+                <bool name="friendly">false</bool>
+                <string name="snd">sound/highwizard.sbnk:firewall_burn</string>
+                <int name="freq">.25</int>
+                <int name="range">10</int>
+                <float name="health-loss">0.015</float> 
+                %// .025 .15 .01
+            </dict>
+        </array>
+
+        <dict name="effect-params">
+        </dict>
+    </behavior>
+
+    <scenes start="loop">
+        <scene name="shared">
+            <collision static="true">
+                <circle offset="0 0" shoot-through="false" layer="-1" aim-through="true" radius="4" sensor="true" />
+            </collision>
+        </scene>
+
+        <scene name="loop">
+            <scene src="shared" />
+
+            <effect src="./firewall_node.effect" />
+        </scene>
+    </scenes>
+</unit>

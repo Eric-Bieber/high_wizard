@@ -1,8 +1,8 @@
 <dict>
 	<string name="name">.skills.paladin.sword</string>
 	<array name="icon">
-		<string>gui/icons_skills.png</string>
-		<int>100</int><vec4>0 0 24 24</vec4>
+		<string>gui/highpriest_skills.png</string>
+		<int>100</int><vec4>48 0 24 24</vec4>
 	</array>
 
 	<array name="skills">
@@ -25,148 +25,71 @@
 
 			<int name="arc">90</int>
 			<int name="rays">100</int>
-			<int name="dist">40</int>
+			<int name="dist">45</int>
 			<int name="duration">120</int>
 		</dict>
 		
 		<!-- Level 2 -->
 		<dict>
-			<string name="class">Skills::MeleeSwing</string>
+			<string name="class">Skills::JupitelThunder</string>
 			
 			<int name="cooldown">300</int>
 			<int name="castpoint">0</int>
 			
-			<string name="fx">effects/players/slash_120.effect</string>
-			<string name="snd">event:/player/paladin/sword_swing</string>
-			<string name="hit-snd">event:/player/paladin/sword_hit</string>
+			<string name="fx">players/highwizard/jupitel_thunder_wave.effect</string>
+            <string name="hit-fx">players/highwizard/jupitel_thunder_lightning.effect</string>
+			<string name="snd">sound/highwizard.sbnk:jupitel_thunder</string>
+			<string name="hit-snd">sound/highwizard.sbnk:jupitel_thunder_hit</string>
+            <string name="buff">players/highwizardbuffs.sval:jupitel-thunder-2</string>
 			<string name="anim">attack 8</string>
-			<float name="speed-mul">0.05</float>
+			<float name="speed-mul">1</float>
 
-			<int name="arc">120</int>
-			<int name="rays">9</int>
-			<int name="dist">18</int>
-			<int name="duration">60</int>
-			<dict name="effect">
-				<string name="class">Damage</string>
-				<int name="physical">19</int>
-			</dict>
+			<int name="arc">90</int>
+			<int name="rays">100</int>
+			<int name="dist">45</int>
+			<int name="duration">120</int>
 		</dict>
 		
 		<!-- Level 3 -->
 		<dict>
-			<string name="class">Skills::MeleeSwing</string>
+			<string name="class">Skills::JupitelThunder</string>
 			
 			<int name="cooldown">300</int>
 			<int name="castpoint">0</int>
 			
-			<string name="fx">effects/players/slash_150.effect</string>
-			<string name="snd">event:/player/paladin/sword_swing</string>
-			<string name="hit-snd">event:/player/paladin/sword_hit</string>
+			<string name="fx">players/highwizard/jupitel_thunder_wave.effect</string>
+            <string name="hit-fx">players/highwizard/jupitel_thunder_lightning.effect</string>
+			<string name="snd">sound/highwizard.sbnk:jupitel_thunder</string>
+			<string name="hit-snd">sound/highwizard.sbnk:jupitel_thunder_hit</string>
+            <string name="buff">players/highwizardbuffs.sval:jupitel-thunder-3</string>
 			<string name="anim">attack 8</string>
-			<float name="speed-mul">0.05</float>
+			<float name="speed-mul">1</float>
 
-			<int name="arc">150</int>
-			<int name="rays">11</int>
-			<int name="dist">18</int>
-			<int name="duration">60</int>
-			<dict name="effect">
-				<string name="class">Damage</string>
-				<int name="physical">22</int>
-			</dict>
+			<int name="arc">90</int>
+			<int name="rays">100</int>
+			<int name="dist">45</int>
+			<int name="duration">120</int>
 		</dict>
 		
 		<!-- Level 4 -->
 		<dict>
-			<string name="class">Skills::MeleeSwing</string>
+			<string name="class">Skills::JupitelThunder</string>
 			
 			<int name="cooldown">300</int>
 			<int name="castpoint">0</int>
 			
-			<string name="fx">effects/players/slash_180.effect</string>
-			<string name="snd">event:/player/paladin/sword_swing</string>
-			<string name="hit-snd">event:/player/paladin/sword_hit</string>
+			<string name="fx">players/highwizard/jupitel_thunder_wave.effect</string>
+            <string name="hit-fx">players/highwizard/jupitel_thunder_lightning.effect</string>
+			<string name="snd">sound/highwizard.sbnk:jupitel_thunder</string>
+			<string name="hit-snd">sound/highwizard.sbnk:jupitel_thunder_hit</string>
+            <string name="buff">players/highwizardbuffs.sval:jupitel-thunder-4</string>
 			<string name="anim">attack 8</string>
-			<float name="speed-mul">0.05</float>
-			
-			<int name="arc">180</int>
-			<int name="rays">14</int>
-			<int name="dist">18</int>
-			<int name="duration">60</int>
-			<dict name="effect">
-				<string name="class">Damage</string>
-				<int name="physical">25</int>
-			</dict>
-		</dict>
-		
-		<!-- Level 5 -->
-		<dict>
-			<string name="class">Skills::MeleeSwing</string>
-			
-			<int name="cooldown">300</int>
-			<int name="castpoint">0</int>
-			
-			<string name="fx">effects/players/slash_210.effect</string>
-			<string name="snd">event:/player/paladin/sword_swing</string>
-			<string name="hit-snd">event:/player/paladin/sword_hit</string>
-			<string name="anim">attack 8</string>
-			<float name="speed-mul">0.05</float>
+			<float name="speed-mul">1</float>
 
-			<int name="arc">210</int>
-			<int name="rays">16</int>
-			<int name="dist">18</int>
-			<int name="duration">60</int>
-			<dict name="effect">
-				<string name="class">Damage</string>
-				<int name="physical">28</int>
-			</dict>
-		</dict>
-		
-		<!-- Level 6 -->
-		<dict>
-			<string name="class">Skills::MeleeSwing</string>
-			
-			<int name="cooldown">300</int>
-			<int name="castpoint">0</int>
-			
-			<string name="fx">effects/players/slash_240.effect</string>
-			<string name="snd">event:/player/paladin/sword_swing</string>
-			<string name="hit-snd">event:/player/paladin/sword_hit</string>
-			<string name="anim">attack 8</string>
-			<float name="speed-mul">0.05</float>
-
-			<int name="arc">240</int>
-			<int name="rays">18</int>
-			<int name="dist">18</int>
-			<int name="duration">60</int>
-			<dict name="effect">
-				<string name="class">Damage</string>
-				<int name="physical">31</int>
-			</dict>
+			<int name="arc">90</int>
+			<int name="rays">100</int>
+			<int name="dist">45</int>
+			<int name="duration">120</int>
 		</dict>
 	</array>
-	
-	<!-- Mercenary primary -->
-	
-	<string name="mercenary-primary-description">.skills.paladin.sword.merc</string>
-	<dict name="mercenary-primary">
-		<string name="class">Skills::MeleeSwing</string>
-		
-		<int name="cooldown">300</int>
-		<int name="castpoint">0</int>
-		
-		<string name="fx">effects/players/slash_240.effect</string>
-		<string name="snd">event:/player/paladin/sword_swing</string>
-		<string name="hit-snd">event:/player/paladin/sword_hit</string>
-		<string name="anim">attack 8</string>
-		<float name="speed-mul">0.05</float>
-
-		<int name="arc">240</int>
-		<int name="rays">18</int>
-		<int name="dist">18</int>
-		<int name="duration">60</int>
-		<dict name="effect">
-			<string name="class">Damage</string>
-			<int name="physical">31</int>
-		</dict>
-	</dict>
 </dict>

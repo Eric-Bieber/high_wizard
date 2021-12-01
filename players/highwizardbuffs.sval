@@ -1,6 +1,55 @@
 <svals>
+    <!-- Heavens Drive -->
 	<dict name="heavens-drive-1">
 		<int name="duration">500</int>
+
+        <dict name="tick">
+            <int name="freq">100</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">1</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="heavens-drive-2">
+        <int name="duration">500</int>
+
+        <dict name="tick">
+            <int name="freq">100</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">2</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="heavens-drive-3">
+        <int name="duration">500</int>
+
+        <dict name="tick">
+            <int name="freq">100</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">3</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="heavens-drive-4">
+        <int name="duration">500</int>
+
+        <dict name="tick">
+            <int name="freq">100</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">4</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="heavens-drive-5">
+        <int name="duration">500</int>
 
         <dict name="tick">
             <int name="freq">100</int>
@@ -10,7 +59,20 @@
             </dict>
         </dict>
     </dict>
+
+    <dict name="heavens-drive-6">
+        <int name="duration">500</int>
+
+        <dict name="tick">
+            <int name="freq">100</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">6</int>
+            </dict>
+        </dict>
+    </dict>
     
+    <!-- Firewall -->
     <dict name="firewall-1">
         <int name="duration">1000</int>
 
@@ -18,12 +80,145 @@
             <int name="freq">300</int>
             <dict name="effect">
                 <string name="class">CombustionDamage</string>
+                <int name="magical">2</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="firewall-2">
+        <int name="duration">1000</int>
+
+        <dict name="tick">
+            <int name="freq">300</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">4</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="firewall-3">
+        <int name="duration">1000</int>
+
+        <dict name="tick">
+            <int name="freq">300</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">6</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="firewall-4">
+        <int name="duration">1000</int>
+
+        <dict name="tick">
+            <int name="freq">300</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">8</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="firewall-5">
+        <int name="duration">1000</int>
+
+        <dict name="tick">
+            <int name="freq">300</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">10</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="firewall-6">
+        <int name="duration">1000</int>
+
+        <dict name="tick">
+            <int name="freq">300</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">12</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <!-- Jupitel Thunder -->
+    <dict name="jupitel-thunder-1">
+        <int name="duration">500</int>
+        <float name="speed-mul">0</float>
+        <bool name="disarm">true</bool>
+
+        <dict name="tick">
+            <int name="freq">50</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">2</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="jupitel-thunder-2">
+        <int name="duration">500</int>
+        <float name="speed-mul">0</float>
+        <bool name="disarm">true</bool>
+
+        <dict name="tick">
+            <int name="freq">50</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">3</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="jupitel-thunder-3">
+        <int name="duration">500</int>
+        <float name="speed-mul">0</float>
+        <bool name="disarm">true</bool>
+
+        <dict name="tick">
+            <int name="freq">50</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">4</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="jupitel-thunder-4">
+        <int name="duration">500</int>
+        <float name="speed-mul">0</float>
+        <bool name="disarm">true</bool>
+
+        <dict name="tick">
+            <int name="freq">50</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
                 <int name="magical">5</int>
             </dict>
         </dict>
     </dict>
 
+    <!-- Stormgust -->
     <dict name="stormgust-1">
+        <string name="name">stormgust</string>
+        <int name="duration">1000</int>
+
+        <float name="speed-mul">.5</float>
+
+        <dict name="tick">
+            <int name="freq">1000</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">10</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="stormgust-2">
         <string name="name">stormgust</string>
         <int name="duration">1000</int>
 
@@ -33,7 +228,22 @@
             <int name="freq">1000</int>
             <dict name="effect">
                 <string name="class">CombustionDamage</string>
-                <int name="magical">10</int>
+                <int name="magical">15</int>
+            </dict>
+        </dict>
+    </dict>
+
+    <dict name="stormgust-3">
+        <string name="name">stormgust</string>
+        <int name="duration">1000</int>
+
+        <float name="speed-mul">.7</float>
+
+        <dict name="tick">
+            <int name="freq">1000</int>
+            <dict name="effect">
+                <string name="class">CombustionDamage</string>
+                <int name="magical">20</int>
             </dict>
         </dict>
     </dict>
@@ -59,26 +269,78 @@
         </array>
     </dict>
 
-    <dict name="jupitel-thunder-1">
-        <int name="duration">500</int>
-        <float name="speed-mul">0</float>
-        <bool name="disarm">true</bool>
-
-        <dict name="tick">
-            <int name="freq">50</int>
-            <dict name="effect">
-                <string name="class">CombustionDamage</string>
-                <int name="magical">1</int>
-            </dict>
-        </dict>
+    <!-- Quagmire -->
+    <dict name="quagmire-1">
+        <array name="tags">
+            <string>slow</string>
+        </array>
+        <int name="duration">1000</int>
+        <bool name="debuff">true</bool>
+        <float name="speed-mul">0.5</float>
+        <float name="resistance-mul">0.5</float>
+        
+        <array name="colors">
+            <vec4>0.2 0.2 0.1 0.5</vec4>
+            <vec4>0.4 0.4 0.2 0.5</vec4>
+            <vec4>0.8 0.8 0.4 0.5</vec4>
+        </array>
     </dict>
 
+    <dict name="quagmire-2">
+        <array name="tags">
+            <string>slow</string>
+        </array>
+        <int name="duration">1000</int>
+        <bool name="debuff">true</bool>
+        <float name="speed-mul">0.6</float>
+        <float name="resistance-mul">0.6</float>
+        
+        <array name="colors">
+            <vec4>0.2 0.2 0.1 0.5</vec4>
+            <vec4>0.4 0.4 0.2 0.5</vec4>
+            <vec4>0.8 0.8 0.4 0.5</vec4>
+        </array>
+    </dict>
+
+    <dict name="quagmire-3">
+        <array name="tags">
+            <string>slow</string>
+        </array>
+        <int name="duration">1000</int>
+        <bool name="debuff">true</bool>
+        <float name="speed-mul">0.7</float>
+        <float name="resistance-mul">0.7</float>
+        
+        <array name="colors">
+            <vec4>0.2 0.2 0.1 0.5</vec4>
+            <vec4>0.4 0.4 0.2 0.5</vec4>
+            <vec4>0.8 0.8 0.4 0.5</vec4>
+        </array>
+    </dict>
+
+    <dict name="quagmire-4">
+        <array name="tags">
+            <string>slow</string>
+        </array>
+        <int name="duration">1000</int>
+        <bool name="debuff">true</bool>
+        <float name="speed-mul">0.8</float>
+        <float name="resistance-mul">0.8</float>
+        
+        <array name="colors">
+            <vec4>0.2 0.2 0.1 0.5</vec4>
+            <vec4>0.4 0.4 0.2 0.5</vec4>
+            <vec4>0.8 0.8 0.4 0.5</vec4>
+        </array>
+    </dict>
+
+    <!-- Amplify -->
     <dict name="amplify-hud">
         <string name="name">amplify-hud</string>
         <int name="duration">300000</int>
         <array name="hud">
-            <string>gui/icons_buffs.png</string>
-            <int>100</int><vec4>0 0 12 12</vec4>
+            <string>gui/amplify.png</string>
+            <int>100</int><vec4>0 0 13 13</vec4>
         </array>
     </dict>  
 </svals>
