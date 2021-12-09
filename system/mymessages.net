@@ -1,0 +1,14 @@
+<!--
+	Unreliable
+	UnreliableSequenced
+	ReliableUnordered
+	ReliableSequenced
+	ReliableOrdered
+-->
+<network>
+	<message name="PlayEffectEPS" namespace="UnitHandler" delivery="ReliableOrdered">
+		<int /> <!-- Effect Hash -->
+		<vec2pos /> <!-- Position -->
+		<float /> <!-- EPS angle -->
+	</message>
+</network>

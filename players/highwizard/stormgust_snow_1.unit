@@ -19,6 +19,7 @@
                 <string name="class">Skills::StormGustAura</string>
                 <string name="buff">players/highwizardbuffs.sval:stormgust-1</string>
                 <string name="freeze-buff">players/highwizardbuffs.sval:stormgust-freeze</string>
+                <string name="snd">event:/player/wizard/meteor-summon</string>
                 <bool name="friendly">false</bool>
                 <int name="freq">.25</int>
                 <int name="range">30</int>

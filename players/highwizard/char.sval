@@ -9,7 +9,7 @@
 		<string>players/highwizard/quagmire.sval</string>
 		<string>players/highwizard/amplify_magic.sval</string>
 	</array>
-%//firewall.sval
+	
 	<int name="face-y">48</int>
 	<int name="face-count">5</int>
 

@@ -1,17 +1,17 @@
 <soundbank>
-  <sound category="sfx" name="heavens_drive" volume="5" is3d="false" looping="false">
+  <sound category="sfx" name="heavens_drive" volume="5" is3d="true" looping="false">
     <source res="sound/heavens_drive.wav" />
   </sound>
-  <sound category="sfx" name="jupitel_thunder" volume="10" is3d="false" looping="false">
+  <sound category="sfx" name="jupitel_thunder" volume="10" is3d="true" looping="false">
     <source res="sound/jupitel_thunder.wav" />
   </sound>
-  <sound category="sfx" name="jupitel_thunder_hit" volume="3" is3d="false" looping="false">
+  <sound category="sfx" name="jupitel_thunder_hit" volume="3" is3d="true" looping="false">
     <source res="sound/jupitel_thunder_hit.wav" />
   </sound>
-  <sound category="sfx" name="firewall_burn" volume="3" is3d="false" looping="false">
+  <sound category="sfx" name="firewall_burn" volume="3" is3d="true" looping="false">
     <source res="sound/firewall_burn.wav" />
   </sound>
-  <sound category="sfx" name="firewall_activate" volume="7" is3d="false" looping="false">
+  <sound category="sfx" name="firewall_activate" volume="7" is3d="true" looping="false">
     <source res="sound/firewall_activate.wav" />
   </sound>
   <sound category="sfx" name="soulstrike_projectile" volume="1" is3d="false" looping="false">

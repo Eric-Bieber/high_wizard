@@ -1,5 +1,5 @@
 <dict>
-	<string name="name">.skills.sorcerer.frost-shard</string>
+	<string name="name">.skills.highpriest.heavens-drive</string>
 	<array name="icon">
 		<string>gui/highpriest_skills.png</string>
 		<int>100</int><vec4>0 0 24 24</vec4>
@@ -16,7 +16,6 @@
 			<int name="castpoint">0</int>
 			
 			<string name="cursor-fx">players/highwizard/heavens_drive_cursor.effect</string>
-			<string name="snd">sound/highwizard.sbnk:heavens_drive</string>
 			<string name="anim">attack 8</string>
 			<float name="speed-mul">0.5</float>
 
@@ -38,7 +37,6 @@
 			<int name="castpoint">0</int>
 			
 			<string name="cursor-fx">players/highwizard/heavens_drive_cursor.effect</string>
-			<string name="snd">sound/highwizard.sbnk:heavens_drive</string>
 			<string name="anim">attack 8</string>
 			<float name="speed-mul">0.5</float>
 
@@ -60,7 +58,6 @@
 			<int name="castpoint">0</int>
 			
 			<string name="cursor-fx">players/highwizard/heavens_drive_cursor.effect</string>
-			<string name="snd">sound/highwizard.sbnk:heavens_drive</string>
 			<string name="anim">attack 8</string>
 			<float name="speed-mul">0.5</float>
 
@@ -82,7 +79,6 @@
 			<int name="castpoint">0</int>
 			
 			<string name="cursor-fx">players/highwizard/heavens_drive_cursor.effect</string>
-			<string name="snd">sound/highwizard.sbnk:heavens_drive</string>
 			<string name="anim">attack 8</string>
 			<float name="speed-mul">0.5</float>
 
@@ -104,7 +100,6 @@
 			<int name="castpoint">0</int>
 			
 			<string name="cursor-fx">players/highwizard/heavens_drive_cursor.effect</string>
-			<string name="snd">sound/highwizard.sbnk:heavens_drive</string>
 			<string name="anim">attack 8</string>
 			<float name="speed-mul">0.5</float>
 
@@ -126,7 +121,6 @@
 			<int name="castpoint">0</int>
 			
 			<string name="cursor-fx">players/highwizard/heavens_drive_cursor.effect</string>
-			<string name="snd">sound/highwizard.sbnk:heavens_drive</string>
 			<string name="anim">attack 8</string>
 			<float name="speed-mul">0.5</float>
 

@@ -51,8 +51,6 @@ namespace Skills {
 
 		bool Activate(vec2 target) override
 		{ 
-			//Start ability stuff
-
 			if (!m_removeOldest && m_units.length() >= m_maxCount)
 				return false;
 
@@ -97,7 +95,7 @@ namespace Skills {
 		void DoUpdate(int dt) override
 		{
 			// Crosshair management
-			if (!cursorActive) {
+			if (!cursorActive && Network::IsServer()) {
 				StartCursorEffect();
 			}
 

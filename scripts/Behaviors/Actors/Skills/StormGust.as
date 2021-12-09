@@ -92,10 +92,13 @@ namespace Skills
 					} else {
 						dir = -1 * randf();
 					}
+					float angle = min(0.4, dir);
 					dictionary eps = {
-						{ "fall_angle", min(0.4, dir) }
+						{ "fall_angle", angle}
 					};
 					PlayEffect(m_fxSnow, pos, eps);
+					if (!m_needNetSync)
+						(Network::Message("PlayEffectEPS") << HashString(m_fxSnow) << pos << angle).SendToAll();
 					effectsSpawned++;
 				}
 			}

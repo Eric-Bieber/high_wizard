@@ -14,6 +14,9 @@ namespace Skills
 		int m_swings;
 		bool m_destroyProjectiles;
 
+		SoundEvent@ m_snd;
+		SoundInstance@ m_soundI;
+
 		int m_raysC;
 		int m_intervalC;
 		int m_swingsC;
@@ -71,12 +74,15 @@ namespace Skills
 			m_fxCount = GetParamInt(unit, params, "play-fx-count", false, -1);
 
 			@m_buff = LoadActorBuff(GetParamString(unit, params, "buff", true));
+
+			@m_snd = Resources::GetSoundEvent(GetParamString(unit, params, "sound", false));
 		}
 		
 		void Initialize(Actor@ owner, ScriptSprite@ icon, uint id) override
 		{
 			ActiveSkill::Initialize(owner, icon, id);
 			PropagateWeaponInformation(m_effects, id + 1);
+
 		}
 		
 		TargetingMode GetTargetingMode(int &out size) override
@@ -88,11 +94,13 @@ namespace Skills
 		void DoActivate(SValueBuilder@ builder, vec2 target) override
 		{
 			StartSwing(target, false);
+			@m_soundI = m_snd.PlayTracked(m_owner.m_unit.GetPosition());
 		}
 
 		void NetDoActivate(SValue@ param, vec2 target) override
 		{
 			StartSwing(target, true);
+			@m_soundI = m_snd.PlayTracked(m_owner.m_unit.GetPosition());
 		}
 
 		void StartSwing(vec2 dir, bool husk)
@@ -145,6 +153,18 @@ namespace Skills
 				canPush.removeRange(0, canPush.length());
 				m_hits.removeRange(0, m_hits.length());
 				repeat = 0;
+			}
+
+			if (m_soundI !is null) {
+				vec3 uPos = m_owner.m_unit.GetPosition();
+				int mod = 0;
+				if (uPos.y >= 0) {
+					mod = -40;
+				} else {
+					mod = +40;
+				}
+
+				m_soundI.SetPosition(vec3(uPos.x, uPos.y+mod, uPos.z));
 			}
 
 			if (m_raysC <= 0)

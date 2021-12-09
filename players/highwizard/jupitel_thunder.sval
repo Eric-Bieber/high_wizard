@@ -1,5 +1,5 @@
 <dict>
-	<string name="name">.skills.paladin.sword</string>
+	<string name="name">.skills.highpriest.jupitel-thunder</string>
 	<array name="icon">
 		<string>gui/highpriest_skills.png</string>
 		<int>100</int><vec4>48 0 24 24</vec4>
@@ -17,7 +17,7 @@
 			
 			<string name="fx">players/highwizard/jupitel_thunder_wave.effect</string>
             <string name="hit-fx">players/highwizard/jupitel_thunder_lightning.effect</string>
-			<string name="snd">sound/highwizard.sbnk:jupitel_thunder</string>
+			<string name="sound">sound/highwizard.sbnk:jupitel_thunder</string>
 			<string name="hit-snd">sound/highwizard.sbnk:jupitel_thunder_hit</string>
             <string name="buff">players/highwizardbuffs.sval:jupitel-thunder-1</string>
 			<string name="anim">attack 8</string>

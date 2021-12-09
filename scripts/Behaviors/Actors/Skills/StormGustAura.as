@@ -41,6 +41,8 @@ class StormGustAura : ICompositeActorSkill
 	array<UnitPtr>@ m_players;
 
 	array<FrozenActor@> frozenActors;
+
+	SoundEvent@ m_sound;
 	
 	StormGustAura(UnitPtr unit, SValue& params)
 	{
@@ -51,6 +53,7 @@ class StormGustAura : ICompositeActorSkill
 		m_freq = GetParamInt(unit, params, "freq", true, 1000);
 		m_range = GetParamInt(unit, params, "range", true, 150);
 		m_friendly = GetParamBool(unit, params, "friendly", false, true);
+		@m_sound = Resources::GetSoundEvent(GetParamString(unit, params, "snd", false));
 		m_timer = randi(m_freq);
 		
 		@m_conditionals = LoadSkillConditionals(unit, params);
@@ -61,6 +64,8 @@ class StormGustAura : ICompositeActorSkill
 		@m_behavior = behavior;
 
 		@m_players = g_scene.FetchActorsWithTeam(m_behavior.Team, xy(m_unit.GetPosition()), 1000);
+
+		PlaySound3D(m_sound, m_unit.GetPosition());
 	}
 
 	void Save(SValueBuilder& builder)

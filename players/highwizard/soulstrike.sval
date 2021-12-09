@@ -1,5 +1,5 @@
 <dict>
-	<string name="name">.skills.sorcerer.biting-chill</string>
+	<string name="name">.skills.highpriest.soulstrike</string>
 	<array name="icon">
 		<string>gui/highpriest_skills.png</string>
 		<int>100</int><vec4>96 0 24 24</vec4>

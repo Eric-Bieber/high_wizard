@@ -1,5 +1,5 @@
 <dict>
-	<string name="name">.skills.techpriest.incense-candles</string>
+	<string name="name">.skills.highpriest.quagmire</string>
 	<array name="icon">
 		<string>gui/highpriest_skills.png</string>
 		<int>100</int><vec4>120 0 24 24</vec4>

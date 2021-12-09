@@ -18,6 +18,7 @@
             <dict>
                 <string name="class">HeavensDriveAura</string>
                 <string name="buff">players/highwizardbuffs.sval:heavens-drive-1</string>
+                <string name="snd">sound/highwizard.sbnk:heavens_drive</string>
                 <bool name="friendly">false</bool>
                 <int name="freq">.25</int>
                 <int name="range">18</int>

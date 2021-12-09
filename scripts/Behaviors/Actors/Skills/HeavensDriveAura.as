@@ -7,6 +7,7 @@ class HeavensDriveAura : ICompositeActorSkill
 	int m_freq;
 	int m_range;
 	bool m_friendly;
+	SoundEvent@ m_sound;
 	
 	int m_timer;
 	array<ISkillConditional@>@ m_conditionals;
@@ -22,6 +23,7 @@ class HeavensDriveAura : ICompositeActorSkill
 	
 		@m_buff = LoadActorBuff(GetParamString(unit, params, "buff", true));
 		m_freq = GetParamInt(unit, params, "freq", true, 1000);
+		@m_sound = Resources::GetSoundEvent(GetParamString(unit, params, "snd", false));
 		m_range = GetParamInt(unit, params, "range", true, 150);
 		m_friendly = GetParamBool(unit, params, "friendly", false, true);
 		m_timer = randi(m_freq);
@@ -35,6 +37,7 @@ class HeavensDriveAura : ICompositeActorSkill
 
 		@m_targets = g_scene.FetchActorsWithOtherTeam(m_behavior.Team, xy(m_unit.GetPosition()), m_range);
 		@m_players = g_scene.FetchActorsWithTeam(m_behavior.Team, xy(m_unit.GetPosition()), 1000);
+		PlaySound3D(m_sound, m_unit.GetPosition());
 		active = true;
 	}
 

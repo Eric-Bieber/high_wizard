@@ -1,5 +1,5 @@
 <dict>
-	<string name="name">.skills.wizard.meteor-shower</string>
+	<string name="name">.skills.highpriest.stormgust</string>
 	<array name="icon">
 		<string>gui/highpriest_skills.png</string>
 		<int>100</int><vec4>72 0 24 24</vec4>
@@ -16,8 +16,6 @@
 			<int name="castpoint">0</int>
 			
 			<int name="mana-cost">0</int>
-			
-			<string name="snd">event:/player/wizard/meteor-summon</string>
 			<string name="fx-snow">players/highwizard/stormgust_snow_fall.effect</string>
 			<string name="anim">summon-looping</string>
 			<float name="speed-mul">1</float>
@@ -37,7 +35,6 @@
 			
 			<int name="mana-cost">0</int>
 			
-			<string name="snd">event:/player/wizard/meteor-summon</string>
 			<string name="fx-snow">players/highwizard/stormgust_snow_fall.effect</string>
 			<string name="anim">summon-looping</string>
 			<float name="speed-mul">1</float>
@@ -57,7 +54,6 @@
 			
 			<int name="mana-cost">0</int>
 			
-			<string name="snd">event:/player/wizard/meteor-summon</string>
 			<string name="fx-snow">players/highwizard/stormgust_snow_fall.effect</string>
 			<string name="anim">summon-looping</string>
 			<float name="speed-mul">1</float>
