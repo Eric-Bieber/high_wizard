@@ -4,7 +4,7 @@
 
         <int name="hp">50</int>
         <string name="type">construct</string>
-        <int name="ttl">5000</int>
+        <int name="ttl">10000</int>
         <bool name="targetable">false</bool>
         <bool name="no-buffs">true</bool>
         <bool name="floating-hurt">true</bool>

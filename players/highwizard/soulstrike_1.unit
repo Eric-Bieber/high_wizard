@@ -12,7 +12,7 @@
 		<array name="effects">
 			<dict>
 				<string name="class">Damage</string>
-				<int name="physical">5</int>
+				<int name="magical">10</int>
 			</dict>
 		</array>
 		<dict name="effect-params">

@@ -54,6 +54,7 @@ namespace Skills {
                     }
                     return;
                 }
+                return;
             }
 
 			shot_interval_temp -= dt;
@@ -124,9 +125,9 @@ namespace Skills {
 
 		void ShootProjectile(int i) {
     		vec2 targetPos = GetTargetPosition(i);
-			vec2 targetDirection = normalize(targetPos - m_ownerPos);
+			vec2 targetDirection = normalize(targetPos - xy(m_owner.m_unit.GetPosition()));
 
-			auto proj = ProduceProjectile(m_ownerPos);
+			auto proj = ProduceProjectile(xy(m_owner.m_unit.GetPosition()));
             if (!proj.IsValid())
                 return;
 

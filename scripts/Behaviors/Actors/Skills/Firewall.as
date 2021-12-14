@@ -79,11 +79,47 @@ namespace Skills {
 			if (m_units.length() / m_width >= m_maxCount)
 				return false;
 
-			return ActiveSkill::Activate(target);
+			int targetSz = 0;
+			TargetingMode targetMode = GetTargetingMode(targetSz);
+
+			if (m_cooldownC > 0)
+			{
+				m_owner.WarnCooldown(this, m_cooldownC);
+				return false;
+			}
+
+			if (!m_owner.SpendCost(m_costMana, m_costStamina, m_costHealth))
+				return false;
+				
+			if (m_skillId == 0)
+				Tutorial::RegisterAction("attack1");
+			else if (m_skillId == 1)
+				Tutorial::RegisterAction("attack2");
+		
+			if (targetMode != TargetingMode::Toggle)
+				m_cooldownC = m_cooldown;
+			m_castingC = m_castpoint;
+
+			PlaySound3D(m_soundStart, m_owner.m_unit.GetPosition());
+			
+			m_queuedTarget = target;
+			m_animCountdown = m_owner.SetUnitScene(m_animation, true);
+
+			(Network::Message("PlayerActiveSkillActivate") << int(m_skillId) << target).SendToAll();
+			
+			canSpawn = true;
+
+			return true;
+
+			//return ActiveSkill::Activate(target);
 		}
 
 		void Hold(int dt, vec2 target) override
 		{
+			if (!canSpawn) {
+				return;
+			}
+
 			if (!m_cursorActive) {
 				float dir = atan(target.y, target.x);
 				auto cursor = cast<Skills::HeavensDrive>(cast<PlayerBase>(m_owner).m_skills[0]);
@@ -98,6 +134,10 @@ namespace Skills {
 
 		void Release(vec2 target) override
 		{
+			if (!canSpawn) {
+				return;
+			}
+
 			m_cursorActive = false;
 			auto cursor = cast<Skills::HeavensDrive>(cast<PlayerBase>(m_owner).m_skills[0]);
 			cursor.StartCursorEffect();
@@ -112,10 +152,14 @@ namespace Skills {
 	            PlaySound3D(m_sound, xyz(target));
 	            PlaySkillEffect(target);
 			}
+			canSpawn = false;
 		}
 
 		void NetRelease(vec2 target) override
 		{
+			if (!canSpawn) {
+				return;
+			}
 			if (!m_needNetSync && !Network::IsServer())
 			{
 				PlaySkillEffect(target);

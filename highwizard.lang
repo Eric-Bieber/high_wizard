@@ -13,12 +13,12 @@
 	
 	<string name="skills.highwizard.firewall">Firewall</string>
 	<string name="skills.highwizard.firewall.create">Pillars of flames erupt in the shape of a wall, blocking enemy movement.</string>
-	<string name="skills.highwizard.firewall.1">A one wide wall erupts and enemies that touch it take 6 magic damage per second.</string>
-	<string name="skills.highwizard.firewall.2">A one wide wall erupts and enemies that touch it take 12 magic damage per second.</string>
-	<string name="skills.highwizard.firewall.3">A three wide wall erupts and enemies that touch it take 18 magic damage per second.</string>
-	<string name="skills.highwizard.firewall.4">A three wide wall erupts and enemies that touch it take 24 magic damage per second.</string>
-	<string name="skills.highwizard.firewall.5">A five wide wall erupts and enemies that touch it take 30 magic damage per second.</string>
-	<string name="skills.highwizard.firewall.6">A five wide wall erupts and enemies that touch it take 36 magic damage per second.</string>
+	<string name="skills.highwizard.firewall.1">A one wide wall erupts and enemies that touch it take 6 magic damage per second. Hold for a cursor of current wall width.</string>
+	<string name="skills.highwizard.firewall.2">A one wide wall erupts and enemies that touch it take 12 magic damage per second. Hold for a cursor of current wall width.</string>
+	<string name="skills.highwizard.firewall.3">A three wide wall erupts and enemies that touch it take 18 magic damage per second. Hold for a cursor of current wall width.</string>
+	<string name="skills.highwizard.firewall.4">A three wide wall erupts and enemies that touch it take 24 magic damage per second. Hold for a cursor of current wall width.</string>
+	<string name="skills.highwizard.firewall.5">A five wide wall erupts and enemies that touch it take 30 magic damage per second. Hold for a cursor of current wall width.</string>
+	<string name="skills.highwizard.firewall.6">A five wide wall erupts and enemies that touch it take 36 magic damage per second. Hold for a cursor of current wall width.</string>
 	
 	<string name="skills.highwizard.jupitel-thunder">Jupitel Thunder</string>
 	<string name="skills.highwizard.jupitel-thunder.create">Lightning bursts from the High Wizard's hands knocking all enemies back.</string>
@@ -29,17 +29,17 @@
 	
 	<string name="skills.highwizard.stormgust">Stormgust</string>
 	<string name="skills.highwizard.stormgust.create">A devastating blizzard manifests on the target area, freezing all enemies solid.</string>
-	<string name="skills.highwizard.stormgust.1">The blizzard freezes all enemies in the target area for 10 magic damage, allowing them to be shattered by certain abilities for 1.5x damage.</string>
-	<string name="skills.highwizard.stormgust.2">The blizzard freezes all enemies in the target area for 15 magic damage, allowing them to be shattered by certain abilities for 2x damage.</string>
-	<string name="skills.highwizard.stormgust.3">The blizzard freezes all enemies in the target area for 20 magic damage, allowing them to be shattered by certain abilities for 2.5x damage.</string>
+	<string name="skills.highwizard.stormgust.1">The blizzard freezes all enemies in the target area for 1.5 seconds, damaging them for 10 magic damage, and allowing them to be shattered by certain abilities for 1.5x damage.</string>
+	<string name="skills.highwizard.stormgust.2">The blizzard freezes all enemies in the target area for 1.5 seconds, damaging them for 15 magic damage, and allowing them to be shattered by certain abilities for 2x damage.</string>
+	<string name="skills.highwizard.stormgust.3">The blizzard freezes all enemies in the target area for 1.5 seconds, damaging them for 20 magic damage, and allowing them to be shattered by certain abilities for 2.5x damage.</string>
 	
 	<string name="skills.highwizard.soulstrike">Soulstrike</string>
 	<string name="skills.highwizard.soulstrike.create">Bolts of light shoot out and fly towards enemies.</string>
-	<string name="skills.highwizard.soulstrike.1">Three bolts shoot towards the nearest enemies each dealing 5 magic damage.</string>
-	<string name="skills.highwizard.soulstrike.2">Three bolts shoot towards the nearest enemies each dealing 10 magic damage.</string>
-	<string name="skills.highwizard.soulstrike.3">Five bolts shoot towards the nearest enemies each dealing 15 magic damage.</string>
-	<string name="skills.highwizard.soulstrike.4">Five bolts shoot towards the nearest enemies each dealing 20 magic damage.</string>
-	<string name="skills.highwizard.soulstrike.5">Seven bolts shoot towards the nearest enemies each dealing 25 magic damage.</string>
+	<string name="skills.highwizard.soulstrike.1">Three bolts shoot towards the nearest enemies each dealing 10 magic damage.</string>
+	<string name="skills.highwizard.soulstrike.2">Three bolts shoot towards the nearest enemies each dealing 15 magic damage.</string>
+	<string name="skills.highwizard.soulstrike.3">Five bolts shoot towards the nearest enemies each dealing 20 magic damage.</string>
+	<string name="skills.highwizard.soulstrike.4">Five bolts shoot towards the nearest enemies each dealing 25 magic damage.</string>
+	<string name="skills.highwizard.soulstrike.5">Seven bolts shoot towards the nearest enemies each dealing 30 magic damage.</string>
 	
 	<string name="skills.highwizard.quagmire">Quagmire</string>
 	<string name="skills.highwizard.quagmire.create">A bog drops at your feet impairing all enemies in the area.</string>

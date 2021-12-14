@@ -250,7 +250,7 @@
 
     <dict name="stormgust-freeze">
         <string name="name">stormgust-freeze</string>
-        <int name="duration">2000</int>
+        <int name="duration">1500</int>
         <!--<array name="tags">
             <string>frozen</string>
             <string>stun</string>
