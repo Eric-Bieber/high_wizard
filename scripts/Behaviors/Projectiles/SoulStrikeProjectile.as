@@ -14,18 +14,27 @@ class SoulStrikeProjectile : RayProjectile
 
 	string fade_fx;
 
+	SoundEvent@ m_sound;
+
 //Constructor
 	SoulStrikeProjectile(UnitPtr unit, SValue& params)
 	{
 		//Parent Constructor (anim)
 		super(unit, params);
 		fade_fx = GetParamString(unit, params, "fade-fx", false);
+		@m_sound = Resources::GetSoundEvent(GetParamString(unit, params, "snd", false));
 		
 		//Overwrite
 		m_seekTurnSpeed = TURN_SPEED_STANDARD;
 		m_seeking = true;
 		m_ttl = 700;
 		m_speed = 8;
+	}
+
+	void Initialize(Actor@ owner, vec2 dir, float intensity, bool husk, Actor@ target, uint weapon) override
+	{
+		PlaySound3D(m_sound, m_unit.GetPosition());
+		RayProjectile::Initialize(owner, dir, intensity, husk, target, weapon);
 	}
 
 	void setTarget(UnitPtr target) {

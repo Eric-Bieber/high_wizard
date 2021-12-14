@@ -1,5 +1,5 @@
 <dict>
-	<string name="name">.skills.highpriest.firewall</string>
+	<string name="name">.skills.highwizard.firewall</string>
 	<array name="icon">
 		<string>gui/highpriest_skills.png</string>
 		<int>100</int><vec4>24 0 24 24</vec4>
@@ -12,7 +12,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">100</int>
+			<int name="cooldown">5000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -25,7 +25,7 @@
 
 			<float name="max-range">100</float>
 
-            <int name="mana-cost">0</int>
+            <int name="mana-cost">25</int>
 
             <string name="unit">players/highwizard/firewall_node_1.unit</string>
             <int name="width">1</int>
@@ -39,7 +39,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">100</int>
+			<int name="cooldown">5000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -52,7 +52,7 @@
 
 			<float name="max-range">100</float>
 
-            <int name="mana-cost">0</int>
+            <int name="mana-cost">25</int>
 
             <string name="unit">players/highwizard/firewall_node_2.unit</string>
             <int name="width">1</int>
@@ -66,7 +66,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">100</int>
+			<int name="cooldown">5000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -79,7 +79,7 @@
 
 			<float name="max-range">100</float>
 
-            <int name="mana-cost">0</int>
+            <int name="mana-cost">35</int>
 
             <string name="unit">players/highwizard/firewall_node_3.unit</string>
             <int name="width">3</int>
@@ -93,7 +93,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">100</int>
+			<int name="cooldown">5000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -106,7 +106,7 @@
 
 			<float name="max-range">100</float>
 
-            <int name="mana-cost">0</int>
+            <int name="mana-cost">35</int>
 
             <string name="unit">players/highwizard/firewall_node_4.unit</string>
             <int name="width">3</int>
@@ -120,7 +120,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">100</int>
+			<int name="cooldown">5000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -133,7 +133,7 @@
 
 			<float name="max-range">100</float>
 
-            <int name="mana-cost">0</int>
+            <int name="mana-cost">45</int>
 
             <string name="unit">players/highwizard/firewall_node_5.unit</string>
             <int name="width">5</int>
@@ -147,7 +147,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">100</int>
+			<int name="cooldown">5000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -160,7 +160,7 @@
 
 			<float name="max-range">100</float>
 
-            <int name="mana-cost">0</int>
+            <int name="mana-cost">45</int>
 
             <string name="unit">players/highwizard/firewall_node_6.unit</string>
             <int name="width">5</int>

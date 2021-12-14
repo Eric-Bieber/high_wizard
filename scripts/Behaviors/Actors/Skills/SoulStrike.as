@@ -4,7 +4,6 @@ namespace Skills {
 
 		int num_projectiles;
 		UnitProducer@ m_projectile;
-		SoundEvent@ m_snd;
 		int m_range;
 		int m_minimumTargets;
 
@@ -26,7 +25,6 @@ namespace Skills {
 			super(unit);
 
 			num_projectiles = GetParamInt(unit, params, "num-projectiles");
-			@m_snd = Resources::GetSoundEvent(GetParamString(unit, params, "fire-snd"));
             @m_projectile = Resources::GetUnitProducer(GetParamString(unit, params, "projectile"));
 
             m_range = GetParamInt(unit, params, "range");
@@ -129,7 +127,6 @@ namespace Skills {
 			vec2 targetDirection = normalize(targetPos - m_ownerPos);
 
 			auto proj = ProduceProjectile(m_ownerPos);
-            PlaySound3D(m_snd, m_owner.m_unit.GetPosition());
             if (!proj.IsValid())
                 return;
 

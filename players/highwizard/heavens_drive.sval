@@ -1,5 +1,5 @@
 <dict>
-	<string name="name">.skills.highpriest.heavens-drive</string>
+	<string name="name">.skills.highwizard.heavens-drive</string>
 	<array name="icon">
 		<string>gui/highpriest_skills.png</string>
 		<int>100</int><vec4>0 0 24 24</vec4>

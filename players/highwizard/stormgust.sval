@@ -1,5 +1,5 @@
 <dict>
-	<string name="name">.skills.highpriest.stormgust</string>
+	<string name="name">.skills.highwizard.stormgust</string>
 	<array name="icon">
 		<string>gui/highpriest_skills.png</string>
 		<int>100</int><vec4>72 0 24 24</vec4>
@@ -12,14 +12,15 @@
 		<dict>
 			<string name="class">Skills::StormGust</string>
 			
-			<int name="cooldown">1000</int>
+			<int name="cooldown">15000</int>
 			<int name="castpoint">0</int>
 			
-			<int name="mana-cost">0</int>
+			<int name="mana-cost">125</int>
 			<string name="fx-snow">players/highwizard/stormgust_snow_fall.effect</string>
 			<string name="anim">summon-looping</string>
 			<float name="speed-mul">1</float>
 			<bool name="blocking">true</bool>
+			<float name="frost-mult">1.5</float>
 			
 			<int name="duration">3000</int>
 			<string name="unit">players/highwizard/stormgust_snow_1.unit</string>
@@ -30,15 +31,16 @@
 		<dict>
 			<string name="class">Skills::StormGust</string>
 			
-			<int name="cooldown">1000</int>
+			<int name="cooldown">15000</int>
 			<int name="castpoint">0</int>
 			
-			<int name="mana-cost">0</int>
+			<int name="mana-cost">150</int>
 			
 			<string name="fx-snow">players/highwizard/stormgust_snow_fall.effect</string>
 			<string name="anim">summon-looping</string>
 			<float name="speed-mul">1</float>
 			<bool name="blocking">true</bool>
+			<float name="frost-mult">2</float>
 			
 			<int name="duration">3000</int>
 			<string name="unit">players/highwizard/stormgust_snow_2.unit</string>
@@ -49,15 +51,16 @@
 		<dict>
 			<string name="class">Skills::StormGust</string>
 			
-			<int name="cooldown">1000</int>
+			<int name="cooldown">15000</int>
 			<int name="castpoint">0</int>
 			
-			<int name="mana-cost">0</int>
+			<int name="mana-cost">175</int>
 			
 			<string name="fx-snow">players/highwizard/stormgust_snow_fall.effect</string>
 			<string name="anim">summon-looping</string>
 			<float name="speed-mul">1</float>
 			<bool name="blocking">true</bool>
+			<float name="frost-mult">2.5</float>
 			
 			<int name="duration">3000</int>
 			<string name="unit">players/highwizard/stormgust_snow_3.unit</string>

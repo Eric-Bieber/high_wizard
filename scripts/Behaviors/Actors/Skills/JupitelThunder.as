@@ -124,6 +124,23 @@ namespace Skills
 			}
 		}
 
+		float findStormGustMultiplier() {
+			float mult = 1;
+
+			auto player = cast<PlayerBase>(m_owner.m_unit.GetScriptBehavior());
+			if (player is null) {
+				return mult;
+			}
+
+			auto stormgust = cast<Skills::StormGust>(player.m_skills[3]);
+			if (stormgust !is null) {
+				float tempMult = stormgust.m_frostMult;
+				mult =  tempMult > mult ? tempMult : mult;
+			}
+
+			return mult;
+		}	
+
 		void DoUpdate(int dt) override
 		{
 			if (canPush.length() > 0) {
@@ -262,7 +279,9 @@ namespace Skills
 					bool frozen = false;
 					for (uint j = 0; j < behavior.m_buffs.m_buffs.length(); j++) {
 						if(behavior.m_buffs.m_buffs[j].m_def.m_name == "stormgust-freeze") {
-							actor.ApplyBuff(ActorBuff(behavior, m_buff, 2.0f * m_multiplier, false));
+							float stormgust_mult = findStormGustMultiplier();
+
+							actor.ApplyBuff(ActorBuff(behavior, m_buff, stormgust_mult * m_multiplier, false));
 							frozen = true;
 						}
 					}

@@ -7,6 +7,7 @@
 		<float name="range-max">50</float>
 		<float name="penetration-intensity-mul">0.9</float>
 		<string name="fade-fx">players/highwizard/soulstrike_fade.effect</string>
+		<string name="snd">sound/highwizard.sbnk:soulstrike_projectile</string>
 		<int name="ttl">800</int>
 		<array name="effects">
 			<dict>

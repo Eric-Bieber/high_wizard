@@ -52,9 +52,9 @@ class HeavensDriveAura : ICompositeActorSkill
 	void Update(int dt, bool isCasting)
 	{
 		if (active) {
-			float multiplier;
+			float amp_mult;
 			if (m_targets.length() > 0) {
-				multiplier = findMultiplier();
+				amp_mult = findMultiplier();
 			} else
 				return;
 
@@ -63,12 +63,14 @@ class HeavensDriveAura : ICompositeActorSkill
 					auto behavior = cast<CompositeActorBehavior>(m_targets[i].GetScriptBehavior());
 					for (uint j = 0; j < behavior.m_buffs.m_buffs.length(); j++) {
 						if(behavior.m_buffs.m_buffs[j].m_def.m_name == "stormgust-freeze") {
-							cast<Actor>(m_targets[i].GetScriptBehavior()).ApplyBuff(ActorBuff(m_behavior, m_buff, 2.0f * multiplier, false));
+							float stormgust_mult = findStormGustMultiplier();
+
+							cast<Actor>(m_targets[i].GetScriptBehavior()).ApplyBuff(ActorBuff(m_behavior, m_buff, stormgust_mult * amp_mult, false));
 							active = false;
 						}
 					}
 					if (active)
-						cast<Actor>(m_targets[i].GetScriptBehavior()).ApplyBuff(ActorBuff(m_behavior, m_buff, 1.0f * multiplier, false));
+						cast<Actor>(m_targets[i].GetScriptBehavior()).ApplyBuff(ActorBuff(m_behavior, m_buff, 1.0f * amp_mult, false));
 				}
 			}
 			active = false;
@@ -86,6 +88,23 @@ class HeavensDriveAura : ICompositeActorSkill
 			auto amp = cast<Skills::AmplifyMagic>(player.m_skills[6]);
 			if (amp !is null) {
 				float tempMult = amp.GetChargeValue(false);
+				mult =  tempMult > mult ? tempMult : mult;
+			}
+		}
+		return mult;
+	}
+
+	float findStormGustMultiplier() {
+		float mult = 1;
+		for (uint j = 0; j < m_players.length(); j++) {
+			auto player = cast<PlayerBase>(m_players[j].GetScriptBehavior());
+			if (player is null) {
+				continue;
+			}
+
+			auto stormgust = cast<Skills::StormGust>(player.m_skills[3]);
+			if (stormgust !is null) {
+				float tempMult = stormgust.m_frostMult;
 				mult =  tempMult > mult ? tempMult : mult;
 			}
 		}

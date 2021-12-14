@@ -1,6 +1,6 @@
 namespace Skills {
 
-	class AmplifyMagic : PassiveSkill {
+	class AmplifyMagic : Skill {
 
 		float m_multiplier;
 		float m_chargeTime;
@@ -17,9 +17,10 @@ namespace Skills {
 		ActorBuffDef@ m_buff;
 
 		SoundEvent@ m_snd;
+		SoundInstance@ m_soundI;
 
 		AmplifyMagic(UnitPtr unit, SValue& params) {
-			super(unit, params);
+			super(unit);
 
 			m_multiplier = GetParamFloat(unit, params, "multiplier", false, 1.0f);
 
@@ -41,7 +42,24 @@ namespace Skills {
 				m_fxUnit.SetPosition(m_owner.m_unit.GetPosition() + vec3(-1,0,0) * input.MoveDir.x + vec3(0,-1,0) * input.MoveDir.y);
 			}
 
+			if (m_soundI !is null) {
+				vec3 uPos = m_owner.m_unit.GetPosition();
+				int mod = 0;
+				if (uPos.y >= 0) {
+					mod = -40;
+				} else {
+					mod = +40;
+				}
+
+				m_soundI.SetPosition(vec3(uPos.x, uPos.y+mod, uPos.z));
+			}
+
 			if (chargeAvailable) {
+				return;
+			}
+
+			auto player = cast<Player>(m_owner.m_unit.GetScriptBehavior());
+			if (player is null) {
 				return;
 			}
 
@@ -59,8 +77,9 @@ namespace Skills {
 				if (m_fxUnit.IsValid()) {
 					m_fxUnit.Destroy();
 				}
-				PlaySound3D(m_snd, m_owner.m_unit.GetPosition());
+				@m_soundI = m_snd.PlayTracked(m_owner.m_unit.GetPosition());
 				m_fxUnit = PlayEffect(m_fx, m_owner.m_unit.GetPosition());
+				(Network::Message("AttachEffect") << HashString(m_fx) << m_owner.m_unit).SendToAll();
 				@m_fxBehavior = cast<EffectBehavior>(m_fxUnit.GetScriptBehavior());
 
 				auto actor = cast<Actor>(m_owner.m_unit.GetScriptBehavior());

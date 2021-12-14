@@ -1,5 +1,5 @@
 <dict>
-	<string name="name">.skills.highpriest.soulstrike</string>
+	<string name="name">.skills.highwizard.soulstrike</string>
 	<array name="icon">
 		<string>gui/highpriest_skills.png</string>
 		<int>100</int><vec4>96 0 24 24</vec4>
@@ -11,7 +11,7 @@
 		<!-- Level 1 -->
 		<dict>
 			<string name="class">Skills::SoulStrike</string>
-			<string name="fire-snd">sound/highwizard.sbnk:soulstrike_projectile</string>
+			
 			<int name="range">100</int>
 			<float name="interval">3000</float>
 			<float name="between-shots">100</float>
@@ -23,7 +23,6 @@
 		<!-- Level 2 -->
 		<dict>
 			<string name="class">Skills::SoulStrike</string>
-			<string name="fire-snd">sound/highwizard.sbnk:soulstrike_projectile</string>
 			<int name="range">100</int>
 			<float name="interval">3000</float>
 			<float name="between-shots">100</float>
@@ -35,7 +34,6 @@
 		<!-- Level 3 -->
 		<dict>
 			<string name="class">Skills::SoulStrike</string>
-			<string name="fire-snd">sound/highwizard.sbnk:soulstrike_projectile</string>
 			<int name="range">100</int>
 			<float name="interval">3000</float>
 			<float name="between-shots">100</float>
@@ -47,7 +45,6 @@
 		<!-- Level 4 -->
 		<dict>
 			<string name="class">Skills::SoulStrike</string>
-			<string name="fire-snd">sound/highwizard.sbnk:soulstrike_projectile</string>
 			<int name="range">100</int>
 			<float name="interval">3000</float>
 			<float name="between-shots">100</float>
@@ -59,7 +56,6 @@
 		<!-- Level 5 -->
 		<dict>
 			<string name="class">Skills::SoulStrike</string>
-			<string name="fire-snd">sound/highwizard.sbnk:soulstrike_projectile</string>
 			<int name="range">100</int>
 			<float name="interval">3000</float>
 			<float name="between-shots">100</float>

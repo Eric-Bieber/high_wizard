@@ -24,6 +24,8 @@ namespace Skills
 
 		string m_fxSnow;
 
+		float m_frostMult;
+
 		StormGust(UnitPtr unit, SValue& params)
 		{
 			super(unit, params);
@@ -34,6 +36,7 @@ namespace Skills
 
 			m_spawnFx = GetParamString(unit, params, "spawn-fx", false);
 			m_fxSnow = GetParamString(unit, params, "fx-snow", false);
+			m_frostMult = GetParamFloat(unit, params, "frost-mult", false, 1.0f);
 			
 			m_needNetSync = !IsNetsyncedExistance(m_unitProd.GetNetSyncMode());
 

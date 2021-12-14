@@ -4,52 +4,49 @@
 	
 	<string name="skills.highwizard.heavens-drive">Heaven's Drive</string>
 	<string name="skills.highwizard.heavens-drive.create">Razor-edged rocks arise from the ground to eviscerate foes.</string>
-	<string name="skills.highwizard.heavens-drive.1">Impales all enemies within the area for 7 total damage.</string>
-	<string name="skills.highwizard.heavens-drive.2">Impales all enemies within the area for 7 total damage.</string>
-	<string name="skills.highwizard.heavens-drive.3">Impales all enemies within the area for 7 total damage.</string>
-	<string name="skills.highwizard.heavens-drive.4">Impales all enemies within the area for 7 total damage.</string>
-	<string name="skills.highwizard.heavens-drive.5">Impales all enemies within the area for 7 total damage.</string>
-	<string name="skills.highwizard.heavens-drive.6">Impales all enemies within the area for 7 total damage.</string>
+	<string name="skills.highwizard.heavens-drive.1">Impales all enemies within the area for 5 total damage.</string>
+	<string name="skills.highwizard.heavens-drive.2">Impales all enemies within the area for 10 total damage.</string>
+	<string name="skills.highwizard.heavens-drive.3">Impales all enemies within the area for 15 total damage.</string>
+	<string name="skills.highwizard.heavens-drive.4">Impales all enemies within the area for 20 total damage.</string>
+	<string name="skills.highwizard.heavens-drive.5">Impales all enemies within the area for 25 total damage.</string>
+	<string name="skills.highwizard.heavens-drive.6">Impales all enemies within the area for 30 total damage.</string>
 	
 	<string name="skills.highwizard.firewall">Firewall</string>
 	<string name="skills.highwizard.firewall.create">Pillars of flames erupt in the shape of a wall, blocking enemy movement.</string>
-	<string name="skills.highwizard.firewall.1">A one wide wall erupts and enemies that touch it take 5 magic damage.</string>
-	<string name="skills.highwizard.firewall.2">A one wide wall erupts and enemies that touch it take 5 magic damage.</string>
-	<string name="skills.highwizard.firewall.3">A three wide wall erupts and enemies that touch it take 5 magic damage.</string>
-	<string name="skills.highwizard.firewall.4">A three wide wall erupts and enemies that touch it take 5 magic damage.</string>
-	<string name="skills.highwizard.firewall.5">A five wide wall erupts and enemies that touch it take 5 magic damage.</string>
-	<string name="skills.highwizard.firewall.6">A five wide wall erupts and enemies that touch it take 5 magic damage.</string>
+	<string name="skills.highwizard.firewall.1">A one wide wall erupts and enemies that touch it take 6 magic damage per second.</string>
+	<string name="skills.highwizard.firewall.2">A one wide wall erupts and enemies that touch it take 12 magic damage per second.</string>
+	<string name="skills.highwizard.firewall.3">A three wide wall erupts and enemies that touch it take 18 magic damage per second.</string>
+	<string name="skills.highwizard.firewall.4">A three wide wall erupts and enemies that touch it take 24 magic damage per second.</string>
+	<string name="skills.highwizard.firewall.5">A five wide wall erupts and enemies that touch it take 30 magic damage per second.</string>
+	<string name="skills.highwizard.firewall.6">A five wide wall erupts and enemies that touch it take 36 magic damage per second.</string>
 	
 	<string name="skills.highwizard.jupitel-thunder">Jupitel Thunder</string>
 	<string name="skills.highwizard.jupitel-thunder.create">Lightning bursts from the High Wizard's hands knocking all enemies back.</string>
-	<string name="skills.highwizard.jupitel-thunder.1">The lightning knocks back all foes in its wake and damages them for a total of 10 magic damage.</string>
-	<string name="skills.highwizard.jupitel-thunder.2">The lightning knocks back all foes in its wake and damages them for a total of 10 magic damage.</string>
-	<string name="skills.highwizard.jupitel-thunder.3">The lightning knocks back all foes in its wake and damages them for a total of 10 magic damage.</string>
-	<string name="skills.highwizard.jupitel-thunder.4">The lightning knocks back all foes in its wake and damages them for a total of 10 magic damage.</string>
+	<string name="skills.highwizard.jupitel-thunder.1">The lightning knocks back all foes in its wake and damages them for a total of 20 magic damage.</string>
+	<string name="skills.highwizard.jupitel-thunder.2">The lightning knocks back all foes in its wake and damages them for a total of 30 magic damage.</string>
+	<string name="skills.highwizard.jupitel-thunder.3">The lightning knocks back all foes in its wake and damages them for a total of 40 magic damage.</string>
+	<string name="skills.highwizard.jupitel-thunder.4">The lightning knocks back all foes in its wake and damages them for a total of 50 magic damage.</string>
 	
 	<string name="skills.highwizard.stormgust">Stormgust</string>
 	<string name="skills.highwizard.stormgust.create">A devastating blizzard manifests on the target area, freezing all enemies solid.</string>
-	<string name="skills.highwizard.stormgust.1">The blizzard freezes all enemies in the target area for 10 magic damage, allowing them
-		to be shattered for 2x damage.</string>
-	<string name="skills.highwizard.stormgust.2">The blizzard freezes all enemies in the target area for 10 magic damage, allowing them
-		to be shattered for 2x damage.</string>
-	<string name="skills.highwizard.stormgust.3">The blizzard freezes all enemies in the target area for 10 magic damage, allowing them
-		to be shattered for 2x damage.</string>
+	<string name="skills.highwizard.stormgust.1">The blizzard freezes all enemies in the target area for 10 magic damage, allowing them to be shattered by certain abilities for 1.5x damage.</string>
+	<string name="skills.highwizard.stormgust.2">The blizzard freezes all enemies in the target area for 15 magic damage, allowing them to be shattered by certain abilities for 2x damage.</string>
+	<string name="skills.highwizard.stormgust.3">The blizzard freezes all enemies in the target area for 20 magic damage, allowing them to be shattered by certain abilities for 2.5x damage.</string>
 	
 	<string name="skills.highwizard.soulstrike">Soulstrike</string>
 	<string name="skills.highwizard.soulstrike.create">Bolts of light shoot out and fly towards enemies.</string>
-	<string name="skills.highwizard.soulstrike.1">Three bolts shoot towards the nearest enemies dealing 10 magic damage.</string>
-	<string name="skills.highwizard.soulstrike.2">Three bolts shoot towards the nearest enemies dealing 10 magic damage.</string>
-	<string name="skills.highwizard.soulstrike.3">Five bolts shoot towards the nearest enemies dealing 10 magic damage.</string>
-	<string name="skills.highwizard.soulstrike.4">Five bolts shoot towards the nearest enemies dealing 10 magic damage.</string>
-	<string name="skills.highwizard.soulstrike.5">Seven bolts shoot towards the nearest enemies dealing 10 magic damage.</string>
+	<string name="skills.highwizard.soulstrike.1">Three bolts shoot towards the nearest enemies each dealing 5 magic damage.</string>
+	<string name="skills.highwizard.soulstrike.2">Three bolts shoot towards the nearest enemies each dealing 10 magic damage.</string>
+	<string name="skills.highwizard.soulstrike.3">Five bolts shoot towards the nearest enemies each dealing 15 magic damage.</string>
+	<string name="skills.highwizard.soulstrike.4">Five bolts shoot towards the nearest enemies each dealing 20 magic damage.</string>
+	<string name="skills.highwizard.soulstrike.5">Seven bolts shoot towards the nearest enemies each dealing 25 magic damage.</string>
 	
 	<string name="skills.highwizard.quagmire">Quagmire</string>
 	<string name="skills.highwizard.quagmire.create">A bog drops at your feet impairing all enemies in the area.</string>
-	<string name="skills.highwizard.quagmire.1">The bog slows and lowers resistances of all enemies in the area by 50%.</string>
-	<string name="skills.highwizard.quagmire.2">The bog slows and lowers resistances of all enemies in the area by 50%.</string>
-	<string name="skills.highwizard.quagmire.3">The bog slows and lowers resistances of all enemies in the area by 50%.</string>
-	<string name="skills.highwizard.quagmire.4">The bog slows and lowers resistances of all enemies in the area by 50%.</string>
+	<string name="skills.highwizard.quagmire.1">After being struck by an enemy, there's a 10% chance a bog will form, slowing and lowering resistances of all enemies in the area by 50%.</string>
+	<string name="skills.highwizard.quagmire.2">After being struck by an enemy, there's a 15% chance a bog will form, slowing and lowering resistances of all enemies in the area by 60%.</string>
+	<string name="skills.highwizard.quagmire.3">After being struck by an enemy, there's a 20% chance a bog will form, slowing and lowering resistances of all enemies in the area by 70%.</string>
+	<string name="skills.highwizard.quagmire.4">After being struck by an enemy, there's a 25% chance a bog will form, slowing and lowering resistances of all enemies in the area by 80%.</string>
 	
 	<string name="skills.highwizard.amplify">Amplify</string>
 	<string name="skills.highwizard.amplify.create">Meditating for a short time, your focus increases your spell's damage.</string>
