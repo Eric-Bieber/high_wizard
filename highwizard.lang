@@ -48,8 +48,8 @@
 	<string name="skills.highwizard.quagmire.3">After being struck by an enemy, there's a 20% chance a bog will form, slowing and lowering resistances of all enemies in the area by 70%.</string>
 	<string name="skills.highwizard.quagmire.4">After being struck by an enemy, there's a 25% chance a bog will form, slowing and lowering resistances of all enemies in the area by 80%.</string>
 	
-	<string name="skills.highwizard.amplify">Amplify</string>
-	<string name="skills.highwizard.amplify.create">Meditating for a short time, your focus increases your spell's damage.</string>
+	<string name="skills.highwizard.amplify">Amplify Magic</string>
+	<string name="skills.highwizard.amplify.create">After meditating for a short time, your focus increases your spell's damage.</string>
 	<string name="skills.highwizard.amplify.1">After standing still for one second, all damaging effects from spells are increased by 1.5x.</string>
 	<string name="skills.highwizard.amplify.2">After standing still for one second, all damaging effects from spells are increased by 2.5x.</string>
 	
