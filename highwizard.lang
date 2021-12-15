@@ -13,12 +13,12 @@
 	
 	<string name="skills.highwizard.firewall">Firewall</string>
 	<string name="skills.highwizard.firewall.create">Pillars of flames erupt in the shape of a wall, blocking enemy movement.</string>
-	<string name="skills.highwizard.firewall.1">A one wide wall erupts and enemies that touch it take 6 magic damage per second. Hold for a cursor of current wall width.</string>
-	<string name="skills.highwizard.firewall.2">A one wide wall erupts and enemies that touch it take 12 magic damage per second. Hold for a cursor of current wall width.</string>
-	<string name="skills.highwizard.firewall.3">A three wide wall erupts and enemies that touch it take 18 magic damage per second. Hold for a cursor of current wall width.</string>
-	<string name="skills.highwizard.firewall.4">A three wide wall erupts and enemies that touch it take 24 magic damage per second. Hold for a cursor of current wall width.</string>
-	<string name="skills.highwizard.firewall.5">A five wide wall erupts and enemies that touch it take 30 magic damage per second. Hold for a cursor of current wall width.</string>
-	<string name="skills.highwizard.firewall.6">A five wide wall erupts and enemies that touch it take 36 magic damage per second. Hold for a cursor of current wall width.</string>
+	<string name="skills.highwizard.firewall.1">A one wide wall erupts and enemies that touch it take 6 magic damage per second. Hold for a cursor of current wall width. Maximum of 3.</string>
+	<string name="skills.highwizard.firewall.2">A one wide wall erupts and enemies that touch it take 12 magic damage per second. Hold for a cursor of current wall width. Maximum of 3.</string>
+	<string name="skills.highwizard.firewall.3">A three wide wall erupts and enemies that touch it take 18 magic damage per second. Hold for a cursor of current wall width. Maximum of 3.</string>
+	<string name="skills.highwizard.firewall.4">A three wide wall erupts and enemies that touch it take 24 magic damage per second. Hold for a cursor of current wall width. Maximum of 3.</string>
+	<string name="skills.highwizard.firewall.5">A five wide wall erupts and enemies that touch it take 30 magic damage per second. Hold for a cursor of current wall width. Maximum of 3.</string>
+	<string name="skills.highwizard.firewall.6">A five wide wall erupts and enemies that touch it take 36 magic damage per second. Hold for a cursor of current wall width. Maximum of 3.</string>
 	
 	<string name="skills.highwizard.jupitel-thunder">Jupitel Thunder</string>
 	<string name="skills.highwizard.jupitel-thunder.create">Lightning bursts from the High Wizard's hands knocking all enemies back.</string>

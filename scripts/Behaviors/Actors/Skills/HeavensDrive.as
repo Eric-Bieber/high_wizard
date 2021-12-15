@@ -47,6 +47,10 @@ namespace Skills {
 			m_maxRange = GetParamFloat(unit, params, "max-range", false, 5.0f);
 		}
 
+		void OnDestroy() override {
+			m_cursorFx_unit.Destroy();
+		}
+
 		TargetingMode GetTargetingMode(int &out size) override { return TargetingMode::TargetAOE; }
 
 		bool Activate(vec2 target) override

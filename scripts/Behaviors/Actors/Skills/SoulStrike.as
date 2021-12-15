@@ -41,13 +41,13 @@ namespace Skills {
 		{
             if (m_shooting) {
                 m_betweenShotIntervalC -= dt;
-                if (m_betweenShotIntervalC < 0)  {
+                if (m_betweenShotIntervalC < 0) {
                     m_shots++;
                     m_betweenShotIntervalC = m_betweenShotInterval;
 
                     ShootProjectile(m_shots-1); 
 
-                    if (m_shots == m_targets.length()) {
+                    if (m_shots == m_targets.length() || m_shots == num_projectiles) {
                         m_targets.removeRange(0, m_targets.length()); 
                         m_shooting = false;
                         m_shots = 0;

@@ -12,7 +12,7 @@
 		<dict>
 			<string name="class">Skills::JupitelThunder</string>
 			
-			<int name="cooldown">10000</int>
+			<int name="cooldown">6000</int>
 			<int name="castpoint">0</int>
 			<int name="mana-cost">40</int>
 			<string name="anim">cast 8</string>
@@ -34,7 +34,7 @@
 		<dict>
 			<string name="class">Skills::JupitelThunder</string>
 			
-			<int name="cooldown">10000</int>
+			<int name="cooldown">6000</int>
 			<int name="castpoint">0</int>
 			<int name="mana-cost">45</int>
 			
@@ -56,7 +56,7 @@
 		<dict>
 			<string name="class">Skills::JupitelThunder</string>
 			
-			<int name="cooldown">10000</int>
+			<int name="cooldown">6000</int>
 			<int name="castpoint">0</int>
 			<int name="mana-cost">50</int>
 			
@@ -78,7 +78,7 @@
 		<dict>
 			<string name="class">Skills::JupitelThunder</string>
 			
-			<int name="cooldown">10000</int>
+			<int name="cooldown">6000</int>
 			<int name="castpoint">0</int>
 			<int name="mana-cost">55</int>
 			

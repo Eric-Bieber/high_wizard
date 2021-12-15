@@ -12,7 +12,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">5000</int>
+			<int name="cooldown">3000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -30,7 +30,7 @@
             <string name="unit">players/highwizard/firewall_node_1.unit</string>
             <int name="width">1</int>
             <bool name="remove-oldest">true</bool>
-            <int name="max-count">20</int>
+            <int name="max-count">3</int>
             <bool name="safe-spawn">true</bool>
             <int name="spawn-dist">10</int>
 		</dict>
@@ -39,7 +39,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">5000</int>
+			<int name="cooldown">3000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -57,7 +57,7 @@
             <string name="unit">players/highwizard/firewall_node_2.unit</string>
             <int name="width">1</int>
             <bool name="remove-oldest">true</bool>
-            <int name="max-count">20</int>
+            <int name="max-count">3</int>
             <bool name="safe-spawn">true</bool>
             <int name="spawn-dist">10</int>
 		</dict>
@@ -66,7 +66,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">5000</int>
+			<int name="cooldown">3000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -84,7 +84,7 @@
             <string name="unit">players/highwizard/firewall_node_3.unit</string>
             <int name="width">3</int>
             <bool name="remove-oldest">true</bool>
-            <int name="max-count">20</int>
+            <int name="max-count">3</int>
             <bool name="safe-spawn">true</bool>
             <int name="spawn-dist">10</int>
 		</dict>
@@ -93,7 +93,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">5000</int>
+			<int name="cooldown">3000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -111,7 +111,7 @@
             <string name="unit">players/highwizard/firewall_node_4.unit</string>
             <int name="width">3</int>
             <bool name="remove-oldest">true</bool>
-            <int name="max-count">20</int>
+            <int name="max-count">3</int>
             <bool name="safe-spawn">true</bool>
             <int name="spawn-dist">10</int>
 		</dict>
@@ -120,7 +120,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">5000</int>
+			<int name="cooldown">3000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -147,7 +147,7 @@
 		<dict>
 			<string name="class">Skills::Firewall</string>
 			
-			<int name="cooldown">5000</int>
+			<int name="cooldown">3000</int>
 			<int name="castpoint">0</int>
 			
 			<string name="snd">sound/highwizard.sbnk:firewall_activate</string>
@@ -165,7 +165,7 @@
             <string name="unit">players/highwizard/firewall_node_6.unit</string>
             <int name="width">5</int>
             <bool name="remove-oldest">true</bool>
-            <int name="max-count">20</int>
+            <int name="max-count">3</int>
             <bool name="safe-spawn">true</bool>
             <int name="spawn-dist">10</int>
 		</dict>
